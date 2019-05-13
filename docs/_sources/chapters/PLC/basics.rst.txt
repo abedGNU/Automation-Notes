@@ -2,5 +2,11 @@
 Basics
 *******************
 
-Overview
-==========
+Sensors and actuators
+======================
+
+Programmable logic controller: PLC
+===================================
+
+Programming principles
+=======================

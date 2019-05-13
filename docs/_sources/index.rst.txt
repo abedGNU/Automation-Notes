@@ -16,4 +16,4 @@ Automation notes!
 
    chapters/PLC/basics.rst
    chapters/PLC/s7-1200.rst
-
+   chapters/PLC/concepts.rst

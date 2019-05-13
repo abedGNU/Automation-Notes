@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2. S7-1200 Example 01 &mdash; Automation notes 0.1.0 documentation</title>
+  <title>2. Siemens PLC first steps &mdash; Automation notes 0.1.0 documentation</title>
   
 
   
@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="3. Fundamental concepts" href="concepts.html" />
     <link rel="prev" title="1. Basics" href="basics.html" /> 
 
   
@@ -84,18 +85,20 @@
               <p class="caption"><span class="caption-text">PLC</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="basics.html">1. Basics</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. S7-1200 Example 01</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#overview">2.1. Overview</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#new-project">2.1.1. New Project</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#set-ip-address">2.1.2. Set Ip Address</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#system-and-clock-memory">2.1.3. System and Clock memory</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#tia-portal-navigation">2.1.4. Tia portal navigation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#tags">2.1.5. Tags</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#download-configuration">2.1.6. Download configuration</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Siemens PLC first steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#s7-1200-overview">2.1. S7-1200 Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#new-tia-portal-project">2.2. New Tia Portal project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#set-ip-address">2.2.1. Set Ip Address</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#system-and-clock-memory">2.2.2. System and Clock memory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tia-portal-navigation">2.2.3. Tia portal navigation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#download-configuration">2.2.4. Download configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#online-and-diagnostics">2.2.5. Online and diagnostics</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#simple-program">2.3. Simple Program</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="concepts.html">3. Fundamental concepts</a></li>
 </ul>
 
             
@@ -141,7 +144,7 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-      <li>2. S7-1200 Example 01</li>
+      <li>2. Siemens PLC first steps</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -160,64 +163,88 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="s7-1200-example-01">
-<h1>2. S7-1200 Example 01<a class="headerlink" href="#s7-1200-example-01" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="overview">
-<h2>2.1. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="new-project">
-<h3>2.1.1. New Project<a class="headerlink" href="#new-project" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-center" id="id1" style="width: 600px">
+  <div class="section" id="siemens-plc-first-steps">
+<h1>2. Siemens PLC first steps<a class="headerlink" href="#siemens-plc-first-steps" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="s7-1200-overview">
+<h2>2.1. S7-1200 Overview<a class="headerlink" href="#s7-1200-overview" title="Permalink to this headline">¶</a></h2>
+<p>We will use S7-1200 PLC. The model that we will be using is 1215C direct current (DC).
+The advantage of S7-1200 is the price and the integrated IO.</p>
+<p>As shown in the image this PLC have 14 digital inputs (DI) and 10 digital outputs (DQ) and 2 analog inputs (AI) and 2 analog outputs (AQ).
+It have also High speed counters (HSC) and Pulse generators (PWM).</p>
+<div class="figure align-center" id="id1" style="width: 400px">
+<span id="figs7-1200"></span><img alt="../../_images/S7-1200.jpg" src="../../_images/S7-1200.jpg" />
+<p class="caption"><span class="caption-text">Siemens S7-1200 PLC</span></p>
+<div class="legend">
+</div>
+</div>
+<div class="figure align-center" id="id2" style="width: 400px">
+<span id="figs7-1200-2"></span><img alt="../../_images/S7-1200-2.jpg" src="../../_images/S7-1200-2.jpg" />
+<p class="caption"><span class="caption-text">CPU 1215C DC/DC/DC 6ES7 215-1AG40-0XB0</span></p>
+</div>
+</div>
+<div class="section" id="new-tia-portal-project">
+<h2>2.2. New Tia Portal project<a class="headerlink" href="#new-tia-portal-project" title="Permalink to this headline">¶</a></h2>
+<p>In this section we will create a new Tia Portal project and create a new device. The new device will be the PLC we see in the previous section.</p>
+<div class="figure align-center" id="id3" style="width: 600px">
 <span id="fignewproject"></span><img alt="../../_images/NewProject.gif" src="../../_images/NewProject.gif" />
 <p class="caption"><span class="caption-text">New TIA portal project</span></p>
 <div class="legend">
-Create</div>
-</div>
+Create a new project and add S7-1200 PLC</div>
 </div>
 <div class="section" id="set-ip-address">
-<h3>2.1.2. Set Ip Address<a class="headerlink" href="#set-ip-address" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-center" id="id2" style="width: 600px">
+<h3>2.2.1. Set Ip Address<a class="headerlink" href="#set-ip-address" title="Permalink to this headline">¶</a></h3>
+<p>After creating a new PLC, the first step is to set its IP address. To set the Ip address, you need to open the property dialog of the PLC. If you click on the PLC image you need to go to <code class="docutils literal notranslate"><span class="pre">PROFINET</span> <span class="pre">interface</span> <span class="pre">[X1]</span></code>, <code class="docutils literal notranslate"><span class="pre">Ethernet</span> <span class="pre">addresses</span></code>. If you click on the Ethernet ports on the PLC image you can see directly the entry <code class="docutils literal notranslate"><span class="pre">Ethernet</span> <span class="pre">addresses</span></code>.</p>
+<div class="figure align-center" id="id4" style="width: 600px">
 <span id="figipaddress"></span><img alt="../../_images/IpAddress.gif" src="../../_images/IpAddress.gif" />
-<p class="caption"><span class="caption-text">New TIA portal project</span></p>
-<div class="legend">
-Create</div>
+<p class="caption"><span class="caption-text">Set IP address</span></p>
 </div>
 </div>
 <div class="section" id="system-and-clock-memory">
-<h3>2.1.3. System and Clock memory<a class="headerlink" href="#system-and-clock-memory" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-center" id="id3" style="width: 600px">
+<h3>2.2.2. System and Clock memory<a class="headerlink" href="#system-and-clock-memory" title="Permalink to this headline">¶</a></h3>
+<p>A clock in any CPU is necessary to provide timing. Select the PLC and in the property dialog check the 2 check boxes: <code class="docutils literal notranslate"><span class="pre">System</span> <span class="pre">memory</span> <span class="pre">bits</span></code> and <code class="docutils literal notranslate"><span class="pre">Clock</span> <span class="pre">memory</span> <span class="pre">bits</span></code>.</p>
+<div class="figure align-center" id="id5" style="width: 600px">
 <span id="figsystemclock"></span><img alt="../../_images/SystemClock.gif" src="../../_images/SystemClock.gif" />
-<p class="caption"><span class="caption-text">New TIA portal project</span></p>
+<p class="caption"><span class="caption-text">System and Clock memory</span></p>
+</div>
+<p>Once these flags are checked, the PLC provide different system variables. For example <code class="docutils literal notranslate"><span class="pre">AlwaysTrue</span></code> is a variable that is always <code class="docutils literal notranslate"><span class="pre">true</span></code> i.e. have always value <code class="docutils literal notranslate"><span class="pre">1</span></code>. The variable <code class="docutils literal notranslate"><span class="pre">Clock_1Hz</span></code> is a variable that have the form of a square wave, where it is for <code class="docutils literal notranslate"><span class="pre">0.5s</span></code> is high and for <code class="docutils literal notranslate"><span class="pre">0.5s</span></code> low.</p>
+<div class="figure align-center" id="id6" style="width: 400px">
+<span id="figclock"></span><img alt="../../_images/clock.jpg" src="../../_images/clock.jpg" />
+<p class="caption"><span class="caption-text">CPU Clock</span></p>
 <div class="legend">
-Create</div>
+Remember that the time = 1/frequency</div>
 </div>
 </div>
 <div class="section" id="tia-portal-navigation">
-<h3>2.1.4. Tia portal navigation<a class="headerlink" href="#tia-portal-navigation" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-center" id="id4" style="width: 600px">
+<h3>2.2.3. Tia portal navigation<a class="headerlink" href="#tia-portal-navigation" title="Permalink to this headline">¶</a></h3>
+<p>Tia portal main windows is a dockable user interface. The following animation show how to navigate the main window.</p>
+<div class="figure align-center" id="id7" style="width: 600px">
 <span id="fignavigation"></span><img alt="../../_images/navigation.gif" src="../../_images/navigation.gif" />
-<p class="caption"><span class="caption-text">New TIA portal project</span></p>
-<div class="legend">
-Create</div>
-</div>
-</div>
-<div class="section" id="tags">
-<h3>2.1.5. Tags<a class="headerlink" href="#tags" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-center" id="id5" style="width: 600px">
-<span id="figtags"></span><img alt="../../_images/tags.gif" src="../../_images/tags.gif" />
-<p class="caption"><span class="caption-text">New TIA portal project</span></p>
-<div class="legend">
-Create</div>
+<p class="caption"><span class="caption-text">TIA portal windows navigation</span></p>
 </div>
 </div>
 <div class="section" id="download-configuration">
-<h3>2.1.6. Download configuration<a class="headerlink" href="#download-configuration" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-center" id="id6" style="width: 600px">
+<h3>2.2.4. Download configuration<a class="headerlink" href="#download-configuration" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id8" style="width: 600px">
 <span id="figdownloadhw"></span><img alt="../../_images/DownloadHW.gif" src="../../_images/DownloadHW.gif" />
-<p class="caption"><span class="caption-text">New TIA portal project</span></p>
-<div class="legend">
-Create</div>
+<p class="caption"><span class="caption-text">Download configuration</span></p>
 </div>
 </div>
+<div class="section" id="online-and-diagnostics">
+<h3>2.2.5. Online and diagnostics<a class="headerlink" href="#online-and-diagnostics" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id9" style="width: 600px">
+<span id="figonlinediag"></span><img alt="../../_images/OnlineDiag.gif" src="../../_images/OnlineDiag.gif" />
+<p class="caption"><span class="caption-text">Online and diagnostics</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="simple-program">
+<h2>2.3. Simple Program<a class="headerlink" href="#simple-program" title="Permalink to this headline">¶</a></h2>
+<p>Lets suppose we wire a lamp to the first digital output of the PLC, labeled <strong>DQa .0</strong> on the PLC chassis. In the configuration of the PLC we give that output a name or a tag. The name can also be given in the PLC tags table. The following animation illustrate how to create a tag and write a small program in order to blink the lamp.</p>
+<div class="figure align-center" id="id10" style="width: 600px">
+<span id="figclockexample"></span><img alt="../../_images/ClockExample.gif" src="../../_images/ClockExample.gif" />
+<p class="caption"><span class="caption-text">Blink an output with a frequency of 1Hz</span></p>
+</div>
+<p>In this example we use the tag or variable <code class="docutils literal notranslate"><span class="pre">Clock_1Hz</span></code> in order to turn on and off the lamp, output, with a frequency of 1Hz. Remember, the clock have a wave square shape. If we want to blink the output with different timing, for example with a period of 2 seconds, the frequency that should be used is 1/2=0.5Hz. So <code class="docutils literal notranslate"><span class="pre">clock_0.5Hz</span></code> can be used.</p>
 </div>
 </div>
 
@@ -228,6 +255,8 @@ Create</div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="concepts.html" class="btn btn-neutral float-right" title="3. Fundamental concepts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="basics.html" class="btn btn-neutral" title="1. Basics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
