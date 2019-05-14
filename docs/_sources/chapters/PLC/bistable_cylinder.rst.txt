@@ -1,0 +1,10 @@
+*******************
+Bi-stable cylinder
+*******************
+
+.. _figCylDouble:
+.. figure:: images/cyl_double.png
+    :align: center
+    :figwidth: 400px
+
+    Double acting cylinder

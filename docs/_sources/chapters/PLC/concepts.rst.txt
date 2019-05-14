@@ -15,20 +15,65 @@ Memory Overview
 Input and Output
 -----------------
 
+.. _figS7IO:
+.. figure:: images/s7-IO.png
+    :align: center
+    :figwidth: 600px
+
+    S7-1200 integrated IO mapping
+
+.. _figTagOrg:
+.. figure:: images/TagOrganization.gif
+    :align: center
+    :figwidth: 600px
+
+    PLC tags organization
+
 Merker
 -------
+.. _figMerker:
+.. figure:: images/merker.png
+    :align: center
+    :figwidth: 600px
+
+    PLC tags organization
 
 Data Block
 ------------
+.. _figDbCreation:
+.. figure:: images/DbCreation.gif
+    :align: center
+    :figwidth: 600px
+
+    Create new Data Block
+
+.. _figDbTest:
+.. figure:: images/DbTest.gif
+    :align: center
+    :figwidth: 600px
+
+    Using DB variables
 
 POU: Program Organization Unit
 ===============================
 
-Organization Block: OB
-------------------------
+Organization Block
+-------------------
+.. _figOBs:
+.. figure:: images/OBs.gif
+    :align: center
+    :figwidth: 600px
 
-Fucntion
+    Organization Blocks
+
+Function
 ---------
+.. _figFunc:
+.. figure:: images/function.gif
+    :align: center
+    :figwidth: 600px
+
+    Create and use a function as code organization
 
 Function Block
 ---------------

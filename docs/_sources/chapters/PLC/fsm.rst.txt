@@ -1,0 +1,15 @@
+*******************
+State machine
+*******************
+
+.. note:: State machine diagram are drawin in **yEd Graph editor from yWorks**.
+
+
+Concepts
+=========
+
+Example in ST
+==============
+
+Example in Ladder
+==================

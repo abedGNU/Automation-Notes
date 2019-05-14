@@ -10,10 +10,17 @@ Automation notes!
 .. note:: **Knowledge is Power**
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :numbered:
    :caption: PLC
 
    chapters/PLC/basics.rst
    chapters/PLC/s7-1200.rst
    chapters/PLC/concepts.rst
+   chapters/PLC/lad.rst
+   chapters/PLC/bistable_cylinder.rst
+   chapters/PLC/library.rst
+   chapters/PLC/scl.rst
+   chapters/PLC/fsm.rst
+   chapters/PLC/turn-table.rst
+   chapters/PLC/project.rst

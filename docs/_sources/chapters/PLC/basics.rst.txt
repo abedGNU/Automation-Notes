@@ -1,12 +1,198 @@
 *******************
 Basics
 *******************
+In any automatic industrial line the following are present:
+  - Sensors
+  - Actuators
+  - Controller
+  - SCADA
+
+Other components maybe are available, but the first 3 components are the heart of automation.
+
+This system can be compared to human beings. Usually a human have one actuator, one controller and five senosrs (actually the human being sensors are more than 5).
+This system acquire information from outside via sensors (eye, nose, skin, ears, tongue,...). The brain, controller, elaborate these information and send commands to muscles (actuators).
 
 Sensors and actuators
 ======================
+Industrial Sensors are those devices that acquire information from the field. Typically the signals are digital (e.g. switch, proximity sensor) or analog (e.g. height sensors, pressure gauge). Also a camera (vision system) can be classified as a sensor.
+
+Actuators are mainly driven by electric, pneumatic and oleo-dynamic power. These actuators are mainly motors and valves.
 
 Programmable logic controller: PLC
 ===================================
+In this era, hard wiring is not any more necessary. Sensors and actuators can be interfaced to a controller, via cables, fieldbuses or any other communication protocol. PLC and microcontroller based solutions are the main controllers in industrial fields. PLC are programmed Usually in Ladder or in ST. Microcontrollers are programmed in C language. At the heart of a PLC, ther is a microcontroller, where is present a firmware to facilitate to programming.
 
 Programming principles
 =======================
+
+Boolean algebra
+-----------------
+Any CPU or microcontroller basically understand only logic operations. Main logic operations are ``AND``, ``OR``, and ``NOT``. The following table resume the operations of these operators.
+
+.. _figTruthTable:
+.. figure:: images/TruthTable.jpeg
+    :align: center
+    :figwidth: 400px
+
+    Truth table and logic gates
+
+In PLC ladder language is based on logic operations. More on this argument later.
+
+C language
+------------
+C language is chosen for different reasons. It is the king of all programming languages.
+
+In order to try the examples, you can use the online shell: http://www.cpp.sh/. These shell is mainly a C++ compiler. Since C++ is compatible with C, we will use it in order to avoid you to install the compiler on your computer.
+
+.. _figcshellTest:
+.. figure:: images/cshellTest.gif
+    :align: center
+    :figwidth: 600px
+
+    C++ online shell
+
+The following code is the main function, the entry point of any C program. For now we are interested in the ``main`` function.
+
+.. code-block:: C
+  :caption: C program
+  :name: lstC
+
+  #include <stdio.h>
+  int main()
+  {
+    return 0;
+  }
+
+Basic syntax
+^^^^^^^^^^^^^^
+Any programming language borrow some concepts from mathematics: operations, variables, values and functions.
+
+Operations are:
+  - Addition
+  - Subtraction
+  - Multiplications
+  - Division
+
+Values can be:
+  - Integers: 1, 2, 50, -10, ....
+  - Real numbers: 0.2 , 1.5 , 2.5
+  -
+
+Variables are like in mathematics, can hold numeric and non numeric values.
+
+In C and other languages (not all), we must declare a variable before using it.
+
+.. code-block:: C
+  :caption: C program
+  :name: lstsum
+
+  #include <stdio.h>
+  int main()
+  {
+      int a=10;
+      int sum;
+
+      sum = a+ 12;
+
+      printf("the sum = %d",sum);
+
+      return 0;
+  }
+
+C language have different types of numeric variables:
+  - int
+  - double
+  - float
+
+Flow control
+^^^^^^^^^^^^^^
+
+The execution of a program is usually sequential, It begin from the first instruction until the last one. Sometime we need to change the flow of execution. In C we have different contructs for flow control:
+
+  - if else
+  - switch case
+  - for
+  - while
+
+Following a simple program than compare 2 variables.
+
+  .. code-block:: C
+    :caption: If statement
+    :name: lstif
+
+    #include <stdio.h>
+    int main()
+    {
+        int a=10;
+        int b=30;
+
+        if (a == b)
+        {
+            printf("a is equal to b");
+        }
+        else if ( a > b )
+        {
+            printf("a is bigger than b");
+        }
+        else
+        {
+            printf("a is smaller than b");
+        }
+
+        return 0;
+      }
+
+An equivalent to ``if`` is the ``switch``.
+
+.. code-block:: C
+  :caption: Switch statement
+  :name: lstswitch
+
+  #include <stdio.h>
+  int main()
+  {
+      int a=10;
+
+      switch(a){
+          case 0:
+              printf("a is %d", 0);
+              break;
+          case 10:
+              printf("a is %d", 10);
+              break;
+          default:
+              printf("Value not present");
+
+      }
+      return 0;
+  }
+
+Functions
+^^^^^^^^^^
+Functions are useful to group instructions that can be used more than one time and to make the program more readable. In the follwing example, a function called ``max`` is created.
+
+.. code-block:: C
+  :caption: Fucntion
+  :name: lstfunc
+
+  #include <stdio.h>
+
+  int max(int a, int b)
+  {
+      if (a> b)
+          return a;
+      else
+          return b;
+  }
+
+  int main()
+  {
+      int num =10, num2=20;
+
+      int m;
+
+      m = max(num , num2);
+      printf("the maximum is %d", m);
+
+      return 0;
+  }

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2. Siemens PLC first steps &mdash; Automation notes 0.1.0 documentation</title>
+  <title>2. Siemens PLC first steps &mdash; Automation notes 0.3.0 documentation</title>
   
 
   
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                0.1
+                0.3
               </div>
             
           
@@ -99,6 +99,11 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="concepts.html">3. Fundamental concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lad.html">4. Ladder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bistable_cylinder.html">5. Bi-stable cylinder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library.html">6. Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scl.html">7. Structured Text : ST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fsm.html">8. State machine</a></li>
 </ul>
 
             
@@ -165,6 +170,10 @@
             
   <div class="section" id="siemens-plc-first-steps">
 <h1>2. Siemens PLC first steps<a class="headerlink" href="#siemens-plc-first-steps" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All project are written in <strong>TIA portal v15</strong>. The exercise can be in any  version, also in step 7.</p>
+</div>
 <div class="section" id="s7-1200-overview">
 <h2>2.1. S7-1200 Overview<a class="headerlink" href="#s7-1200-overview" title="Permalink to this headline">¶</a></h2>
 <p>We will use S7-1200 PLC. The model that we will be using is 1215C direct current (DC).
@@ -174,8 +183,6 @@ It have also High speed counters (HSC) and Pulse generators (PWM).</p>
 <div class="figure align-center" id="id1" style="width: 400px">
 <span id="figs7-1200"></span><img alt="../../_images/S7-1200.jpg" src="../../_images/S7-1200.jpg" />
 <p class="caption"><span class="caption-text">Siemens S7-1200 PLC</span></p>
-<div class="legend">
-</div>
 </div>
 <div class="figure align-center" id="id2" style="width: 400px">
 <span id="figs7-1200-2"></span><img alt="../../_images/S7-1200-2.jpg" src="../../_images/S7-1200-2.jpg" />
@@ -245,6 +252,7 @@ Remember that the time = 1/frequency</div>
 <p class="caption"><span class="caption-text">Blink an output with a frequency of 1Hz</span></p>
 </div>
 <p>In this example we use the tag or variable <code class="docutils literal notranslate"><span class="pre">Clock_1Hz</span></code> in order to turn on and off the lamp, output, with a frequency of 1Hz. Remember, the clock have a wave square shape. If we want to blink the output with different timing, for example with a period of 2 seconds, the frequency that should be used is 1/2=0.5Hz. So <code class="docutils literal notranslate"><span class="pre">clock_0.5Hz</span></code> can be used.</p>
+<p>:download:` Download S7-1200 project &lt;code/Exercises/Exercise 01.zip&gt;`</p>
 </div>
 </div>
 
@@ -290,7 +298,7 @@ Remember that the time = 1/frequency</div>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'0.1.0',
+            VERSION:'0.3.0',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

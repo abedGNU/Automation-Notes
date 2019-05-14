@@ -2,6 +2,8 @@
 Siemens PLC first steps
 ************************
 
+.. note:: All project are written in **TIA portal v15**. The exercise can be in any  version, also in step 7. 
+
 S7-1200 Overview
 ========================
 We will use S7-1200 PLC. The model that we will be using is 1215C direct current (DC).
@@ -17,7 +19,7 @@ It have also High speed counters (HSC) and Pulse generators (PWM).
 
     Siemens S7-1200 PLC
 
-    .. _figS7-1200-2:
+.. _figS7-1200-2:
 .. figure:: images/S7-1200-2.jpg
     :align: center
     :figwidth: 400px
@@ -115,3 +117,5 @@ Lets suppose we wire a lamp to the first digital output of the PLC, labeled **DQ
     Blink an output with a frequency of 1Hz
 
 In this example we use the tag or variable ``Clock_1Hz`` in order to turn on and off the lamp, output, with a frequency of 1Hz. Remember, the clock have a wave square shape. If we want to blink the output with different timing, for example with a period of 2 seconds, the frequency that should be used is 1/2=0.5Hz. So ``clock_0.5Hz`` can be used.
+
+:download:` Download S7-1200 project <code/Exercises/Exercise 01.zip>`
