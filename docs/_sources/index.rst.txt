@@ -6,21 +6,50 @@
 Automation notes!
 ===================
 
+.. warning:: |today| Work in progress
+
 .. note:: **Scientia potentia est**
-.. note:: **Knowledge is Power**
+
+.. warning:: Work in progress
 
 .. toctree::
+   :caption: Basics
    :maxdepth: 1
    :numbered:
-   :caption: PLC
 
-   chapters/PLC/basics.rst
-   chapters/PLC/s7-1200.rst
-   chapters/PLC/concepts.rst
-   chapters/PLC/lad.rst
-   chapters/PLC/bistable_cylinder.rst
-   chapters/PLC/library.rst
-   chapters/PLC/scl.rst
-   chapters/PLC/fsm.rst
-   chapters/PLC/turn-table.rst
-   chapters/PLC/project.rst
+   chapters/PLC/basics/basics
+   chapters/PLC/basics/programming
+   chapters/PLC/basics/c
+   chapters/PLC/basics/OS
+
+.. warning:: Work in progress
+
+.. toctree::
+  :caption: Siemens PLC
+  :maxdepth: 1
+  :numbered:
+
+  chapters/PLC/Siemens/s7-PLC
+  chapters/PLC/Siemens/concepts
+  chapters/PLC/Siemens/programming
+  chapters/PLC/Siemens/exercises
+  chapters/PLC/Siemens/bistable_cylinder
+  chapters/PLC/Siemens/library
+
+  chapters/PLC/Siemens/fsm
+  chapters/PLC/Siemens/turn-table
+  
+  chapters/PLC/Siemens/style-guide
+  chapters/PLC/Siemens/project
+
+.. warning:: Work in progress
+
+.. toctree::
+  :caption: CoDeSys
+  :maxdepth: 1
+  :numbered:
+
+  chapters/PLC/CoDeSys/iec61131-3
+  chapters/PLC/CoDeSys/codesys
+
+.. note:: **Knowledge is Power**

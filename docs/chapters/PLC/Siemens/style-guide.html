@@ -1,0 +1,405 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>8. Style guide &mdash; Automation notes 0.6.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="9. Final project" href="project.html" />
+    <link rel="prev" title="7. Turn table" href="turn-table.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Automation notes
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.6
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Basics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basics/basics.html">1. Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/programming.html">2. Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/c.html">3. C language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/OS.html">4. Operating systems and firmwares</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Siemens PLC</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="s7-PLC.html">1. Siemens PLC first steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="concepts.html">2. Fundamental concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="programming.html">3. Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercises.html">4. Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library.html">5. Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fsm.html">6. State machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="turn-table.html">7. Turn table</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Style guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#project-organization">8.1. Project organization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#readme">8.1.1. README</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changelog">8.1.2. CHANGELOG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flowchart-or-uml">8.1.3. Flowchart or UML</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#abbreviations">8.2. Abbreviations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prefixes">8.2.1. Prefixes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#names">8.3. Names</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rules">8.4. Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#software-organization">8.5. Software organization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">9. Final project</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CoDeSys</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/iec61131-3.html">1. IEC 61131-3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/codesys.html">2. CoDeSys</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Automation notes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>8. Style guide</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/chapters/PLC/Siemens/style-guide.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="style-guide">
+<h1>8. Style guide<a class="headerlink" href="#style-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="project-organization">
+<h2>8.1. Project organization<a class="headerlink" href="#project-organization" title="Permalink to this headline">¶</a></h2>
+<p>Every project should have:</p>
+<blockquote>
+<div><ul class="simple">
+<li>README.md</li>
+<li>CHANGELOG.md</li>
+<li>Flowchart with yed, and converted in image(png or jpg)</li>
+</ul>
+</div></blockquote>
+<p>The backup is projectName-Type-year-month-day-version-ProgrammerName.zip
+For example :</p>
+<blockquote>
+<div><ul class="simple">
+<li>Excersice01-PLC-2019-05-09-v0.0.1-Abed.zip</li>
+<li>A-JC-18-003-PLC-2019-05-09-v0.0.1-Abed.zip</li>
+<li>A-JC-18-003-ROBOT-2019-05-09-v0.0.1-Abed.zip</li>
+</ul>
+</div></blockquote>
+<p>If in the same line have more than one robot, the robot id number should be the same as electrical drawings:</p>
+<ul class="simple">
+<li>A-JC-18-003-ROBOT01-2019-05-09-v0.0.1-Abed.zip</li>
+<li>A-JC-18-003-ROBOT02-2019-05-09-v0.0.1-Abed.zip</li>
+<li>A-JC-18-003-ROBOT03-2019-05-09-v0.0.1-Abed.zip</li>
+<li>A-JC-18-003-ROBOT04-2019-05-09-v0.0.1-Abed.zip</li>
+</ul>
+<div class="section" id="readme">
+<h3>8.1.1. README<a class="headerlink" href="#readme" title="Permalink to this headline">¶</a></h3>
+<p>General informations about the project.</p>
+<p>References</p>
+<p>Special equipments</p>
+<p>Short description about the workflow</p>
+</div>
+<div class="section" id="changelog">
+<h3>8.1.2. CHANGELOG<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h3>
+<p>The version is : major.minor.patch</p>
+<p>The date is year-mont-day</p>
+<p>## [X.Y.Z] - aaaa-mm-dd Name(who)
+### Added
+for new features.
+### Changed
+for changes in existing functionality.
+### Deprecated
+for soon-to-be removed features.
+### Removed
+for now removed features.
+### Fixed
+for any bug fixes.
+### Security
+in case of vulnerabilities.</p>
+</div>
+<div class="section" id="flowchart-or-uml">
+<h3>8.1.3. Flowchart or UML<a class="headerlink" href="#flowchart-or-uml" title="Permalink to this headline">¶</a></h3>
+<p>Software used: <a class="reference external" href="https://www.yworks.com/products/yed/download">https://www.yworks.com/products/yed/download</a></p>
+<p>Every state machine should be illustrated in a chart (flowchart, uml,…).</p>
+</div>
+</div>
+<div class="section" id="abbreviations">
+<h2>8.2. Abbreviations<a class="headerlink" href="#abbreviations" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Push button : pb, btn</li>
+<li>Lamp : lmp</li>
+<li>Limit switch : lsw</li>
+<li>Command : cmd</li>
+<li>Cylinder: cyl</li>
+<li>Table : tab</li>
+<li>Rotate : rot</li>
+<li>Robot : rob</li>
+<li>Machine : mach</li>
+<li>Panel view : hmi</li>
+<li>Actual : act</li>
+<li>Previous : prev</li>
+<li>Emergency : emrg, emr</li>
+</ul>
+<div class="section" id="prefixes">
+<h3>8.2.1. Prefixes<a class="headerlink" href="#prefixes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Input : i</li>
+<li>Output : q or o</li>
+<li>Analog input : ai</li>
+<li>Analog output : ao or aq</li>
+<li>Ethernet : eth</li>
+<li>Function block : FB</li>
+<li>Function : FC</li>
+<li>User data type: udt</li>
+<li>Structure: st</li>
+</ul>
+</div>
+</div>
+<div class="section" id="names">
+<h2>8.3. Names<a class="headerlink" href="#names" title="Permalink to this headline">¶</a></h2>
+<p>S7 plc languages are not case sensitive, Button and button are the same variable.</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">camelCase</span></code> for primitive data types: bool, word, dword, int, dint, real.</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">PascalCase</span></code> for complex data types, and prefix them with the type:</p>
+<blockquote>
+<div><ul class="simple">
+<li>User defined data (udt, structures): udtConveyor, stConveyor</li>
+<li>AOI: AOI_Conveyor, AOI_Cylinder</li>
+<li>Function Block : FB_Conveyor, FB_Conveyor</li>
+</ul>
+</div></blockquote>
+<p>The name of a variable should begin with the machine name, station name, component then function. For example: <code class="docutils literal notranslate"><span class="pre">conveyorMotorRun</span></code>, <code class="docutils literal notranslate"><span class="pre">conveyorMotorStop</span></code>, <code class="docutils literal notranslate"><span class="pre">conveyorLswPartPresent</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">CONSTANT</span></code> variables in capital letters</p>
+<p>Data blocks:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Global data block: dbConveyor, dbRobot, dbCylinder</li>
+<li>Instance data block: idbConveyor, idbCylinder.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="rules">
+<h2>8.4. Rules<a class="headerlink" href="#rules" title="Permalink to this headline">¶</a></h2>
+<p>Rungs or segments must have a title</p>
+<p>Rungs or segments should be commented in English, no Chinese nor other languages.</p>
+<p>Every variable should have:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Clear name</li>
+<li>Clear description</li>
+<li>If the variable is a signal, it should have the signal number as electrical drawing.</li>
+</ul>
+</div></blockquote>
+<p>Every station have its own Function block, or own program in case of ControlLogix PLC.</p>
+<p>Use state machine:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Make state chart using OpenOffice draw or Yed software..</li>
+<li>Use unique numbers for states, use enumerations not numbers directly.</li>
+</ul>
+</div></blockquote>
+<p>Cylinder:</p>
+<blockquote>
+<div>Cylinder states are: Opened, Closed.
+Cylinder commands are: Open, close.
+Don’t use Forward, backward, up, down, left, right,…</div></blockquote>
+</div>
+<div class="section" id="software-organization">
+<h2>8.5. Software organization<a class="headerlink" href="#software-organization" title="Permalink to this headline">¶</a></h2>
+<p>Functions (FB, FC) are the main building block of any program. The start point of S7 PLC is <code class="docutils literal notranslate"><span class="pre">OB1</span></code>, in <code class="docutils literal notranslate"><span class="pre">OB1</span></code> we should find only function calls. In <code class="docutils literal notranslate"><span class="pre">OB1</span></code> There is no business logic.</p>
+<p>Every station should have is own main <code class="docutils literal notranslate"><span class="pre">FB</span></code> and global <code class="docutils literal notranslate"><span class="pre">DB</span></code> and instance <code class="docutils literal notranslate"><span class="pre">DB</span></code>.
+If the station have more then one component, every component should have its own <code class="docutils literal notranslate"><span class="pre">FB</span></code>. The components’s <code class="docutils literal notranslate"><span class="pre">FB</span></code> should be instantiated in the <code class="docutils literal notranslate"><span class="pre">STAT</span></code> section of the parent <code class="docutils literal notranslate"><span class="pre">FB</span></code>. All functions and DBs of a station should be grouped in a folder.</p>
+<p><code class="docutils literal notranslate"><span class="pre">FB</span></code> that can be reused in different projects, should be placed in the <code class="docutils literal notranslate"><span class="pre">_Library</span></code> folder. A library with <code class="docutils literal notranslate"><span class="pre">FB</span></code> should be used.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Follow example after training</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="project.html" class="btn btn-neutral float-right" title="9. Final project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="turn-table.html" class="btn btn-neutral" title="7. Turn table" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : Creative Commons License 2019, Abed.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.6.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

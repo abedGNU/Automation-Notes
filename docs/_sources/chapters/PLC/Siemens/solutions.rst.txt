@@ -1,0 +1,8 @@
+*******************
+Solutions
+*******************
+
+:download:`Download Exercises solutions <../../../code/Exercises/Siemens/Exercises/Exercises.zip>`
+
+Bi-stable cylinder
+=====================

@@ -1,0 +1,389 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. Programming &mdash; Automation notes 0.6.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="4. Exercises" href="exercises.html" />
+    <link rel="prev" title="2. Fundamental concepts" href="concepts.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Automation notes
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.6
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Basics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basics/basics.html">1. Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/programming.html">2. Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/c.html">3. C language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/OS.html">4. Operating systems and firmwares</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Siemens PLC</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="s7-PLC.html">1. Siemens PLC first steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="concepts.html">2. Fundamental concepts</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#basic-operations">3.1. Basic operations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#coils">3.1.1. Coils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#trigger">3.1.2. Trigger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#timers">3.1.3. Timers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-reset">3.1.4. Set Reset</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#scl">3.2. SCL</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#if-statement">3.2.1. If statement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#case-statement">3.2.2. Case statement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#loop">3.2.3. Loop</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="exercises.html">4. Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library.html">5. Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fsm.html">6. State machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="turn-table.html">7. Turn table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style-guide.html">8. Style guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">9. Final project</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CoDeSys</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/iec61131-3.html">1. IEC 61131-3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/codesys.html">2. CoDeSys</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Automation notes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>3. Programming</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/chapters/PLC/Siemens/programming.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="programming">
+<h1>3. Programming<a class="headerlink" href="#programming" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference download internal" download="" href="../../../_downloads/f5ae24b546423b39222bbe933aea3148/Exercises.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">project</span> <span class="pre">Exercises.zip</span></code></a></p>
+<div class="section" id="basic-operations">
+<h2>3.1. Basic operations<a class="headerlink" href="#basic-operations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="coils">
+<h3>3.1.1. Coils<a class="headerlink" href="#coils" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" style="width: 600px">
+<img alt="../../../_images/mainLogic.png" src="../../../_images/mainLogic.png" />
+</div>
+<div class="figure align-center" id="id1" style="width: 600px">
+<img alt="../../../_images/contact.gif" src="../../../_images/contact.gif" />
+<p class="caption"><span class="caption-text">Coil in ladder and its equivalent in scl</span></p>
+</div>
+</div>
+<div class="section" id="trigger">
+<h3>3.1.2. Trigger<a class="headerlink" href="#trigger" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" style="width: 200px">
+<img alt="../../../_images/r_trig.jpg" src="../../../_images/r_trig.jpg" />
+</div>
+<div class="figure align-center" style="width: 200px">
+<img alt="../../../_images/f_trig.jpg" src="../../../_images/f_trig.jpg" />
+</div>
+<div class="figure align-center" id="id2" style="width: 600px">
+<img alt="../../../_images/trigLD.gif" src="../../../_images/trigLD.gif" />
+<p class="caption"><span class="caption-text">R_TRIG positive signal edge in ladder</span></p>
+</div>
+<div class="figure align-center" id="id3" style="width: 600px">
+<img alt="../../../_images/trigSCL.gif" src="../../../_images/trigSCL.gif" />
+<p class="caption"><span class="caption-text">R_TRIG positive signal edge in SCL</span></p>
+</div>
+</div>
+<div class="section" id="timers">
+<h3>3.1.3. Timers<a class="headerlink" href="#timers" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" style="width: 400px">
+<img alt="../../../_images/ton.png" src="../../../_images/ton.png" />
+</div>
+<div class="figure align-center" id="id4" style="width: 600px">
+<img alt="../../../_images/tonLD.gif" src="../../../_images/tonLD.gif" />
+<p class="caption"><span class="caption-text">TON (On delay) in ladder</span></p>
+</div>
+<div class="figure align-center" style="width: 400px">
+<img alt="../../../_images/tof.png" src="../../../_images/tof.png" />
+</div>
+<div class="figure align-center" id="id5" style="width: 600px">
+<img alt="../../../_images/tofLD.gif" src="../../../_images/tofLD.gif" />
+<p class="caption"><span class="caption-text">TOF (Off delay) in ladder</span></p>
+</div>
+<div class="figure align-center" id="id6" style="width: 600px">
+<img alt="../../../_images/tonSCL.gif" src="../../../_images/tonSCL.gif" />
+<p class="caption"><span class="caption-text">TON (On delay) in SCL</span></p>
+</div>
+</div>
+<div class="section" id="set-reset">
+<h3>3.1.4. Set Reset<a class="headerlink" href="#set-reset" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id7" style="width: 600px">
+<img alt="../../../_images/set_reset.gif" src="../../../_images/set_reset.gif" />
+<p class="caption"><span class="caption-text">Set Reset a signal</span></p>
+</div>
+<div class="figure align-center" id="id8" style="width: 600px">
+<img alt="../../../_images/set_coil_err.gif" src="../../../_images/set_coil_err.gif" />
+<p class="caption"><span class="caption-text">Why the output didn’t change value?</span></p>
+</div>
+<div class="figure align-center" id="id9" style="width: 600px">
+<img alt="../../../_images/set_coil_err.png" src="../../../_images/set_coil_err.png" />
+<p class="caption"><span class="caption-text">What is wrong in this code ????</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="scl">
+<h2>3.2. SCL<a class="headerlink" href="#scl" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="if-statement">
+<h3>3.2.1. If statement<a class="headerlink" href="#if-statement" title="Permalink to this headline">¶</a></h3>
+<p>Think about the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement as you think in daily life.
+For example:</p>
+<blockquote>
+<div><ul class="simple">
+<li>If today is raining I take umbrella</li>
+<li>If it is cold I put a coat</li>
+<li>I you find orange then buy, otherwise buy apple.</li>
+</ul>
+</div></blockquote>
+<div class="figure align-center" id="id10" style="width: 600px">
+<img alt="../../../_images/if.png" src="../../../_images/if.png" />
+<p class="caption"><span class="caption-text">If statement</span></p>
+</div>
+</div>
+<div class="section" id="case-statement">
+<h3>3.2.2. Case statement<a class="headerlink" href="#case-statement" title="Permalink to this headline">¶</a></h3>
+<p>Case is like if, it check if the numerical value of the variable is present in the list, and execute the instruction corresponding to that value.
+For example let create a variable <code class="docutils literal notranslate"><span class="pre">day</span></code> of type <code class="docutils literal notranslate"><span class="pre">int</span></code>. The first day of the week is one the last day is seven.
+So If I want to make a decision tree, I list in the <code class="docutils literal notranslate"><span class="pre">case</span></code> statement days from 1 to 7, and for every value I do something:</p>
+<blockquote>
+<div><ul class="simple">
+<li>If day is 1 (Monday), I go to work</li>
+<li>If day is 2, I do something else</li>
+<li>…</li>
+<li>If day is 6, I stay at home.</li>
+</ul>
+</div></blockquote>
+<div class="figure align-center" id="id11" style="width: 600px">
+<img alt="../../../_images/switch.png" src="../../../_images/switch.png" />
+<p class="caption"><span class="caption-text">Switch Case statement</span></p>
+</div>
+<p>Remember that a case can be written also as an if.</p>
+<p>The Case statement is more suitable in <code class="docutils literal notranslate"><span class="pre">state</span> <span class="pre">machine</span></code>. In Siemens there is no <code class="docutils literal notranslate"><span class="pre">enumeration</span></code> data type. In Tia portal siemens introduce CONSTANTS, so we can emulate an <code class="docutils literal notranslate"><span class="pre">enumeration</span></code>. It is more clear to have name than numbers. For example, is more clear to say Monday than day 1. And if Day 1 for me is Sunday? So is better to create a set of CONSTANTS with unique value and use them.</p>
+<div class="code pascal highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span> <span class="n">today</span><span class="p">;</span>
+<span class="n">const</span> <span class="nb">int</span> <span class="n">MONDAY</span> <span class="p">:</span><span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">const</span> <span class="nb">int</span> <span class="n">TUESDAY</span> <span class="p">:</span><span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="n">const</span> <span class="nb">int</span> <span class="n">WEDNESDAY</span> <span class="p">:</span><span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="n">const</span> <span class="nb">int</span> <span class="n">THURSDAY</span> <span class="p">:</span><span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="n">const</span> <span class="nb">int</span> <span class="n">FRIDAY</span> <span class="p">:</span><span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="n">const</span> <span class="nb">int</span> <span class="n">SATURDAY</span> <span class="p">:</span><span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+<span class="n">const</span> <span class="nb">int</span> <span class="n">SUNDAY</span> <span class="p">:</span><span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+
+<span class="n">CASE</span> <span class="n">today</span> <span class="n">OF</span>
+  <span class="n">MONDAY</span><span class="p">:</span>
+    <span class="n">I</span> <span class="n">go</span> <span class="n">to</span> <span class="n">work</span><span class="p">;</span>
+
+  <span class="n">SATURDAY</span><span class="p">:</span>
+    <span class="n">I</span> <span class="n">sleep</span> <span class="n">more</span><span class="p">;</span>
+
+  <span class="n">ELSE</span><span class="p">:</span>
+    <span class="n">Error</span> <span class="n">day</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">recognized</span><span class="p">;</span>
+
+  <span class="n">END_CASE</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="loop">
+<h3>3.2.3. Loop<a class="headerlink" href="#loop" title="Permalink to this headline">¶</a></h3>
+<p>Try to avoid <code class="docutils literal notranslate"><span class="pre">for</span></code> and <code class="docutils literal notranslate"><span class="pre">while</span></code> in PLC programming if you don’t know what are you doing. Infinite loops stop the plc.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="exercises.html" class="btn btn-neutral float-right" title="4. Exercises" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="concepts.html" class="btn btn-neutral" title="2. Fundamental concepts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : Creative Commons License 2019, Abed.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.6.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
