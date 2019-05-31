@@ -102,6 +102,7 @@ If statement
 --------------
 Think about the ``if`` statement as you think in daily life.
 For example:
+
   - If today is raining I take umbrella
   - If it is cold I put a coat
   - I you find orange then buy, otherwise buy apple.
@@ -117,6 +118,7 @@ Case statement
 Case is like if, it check if the numerical value of the variable is present in the list, and execute the instruction corresponding to that value.
 For example let create a variable ``day`` of type ``int``. The first day of the week is one the last day is seven.
 So If I want to make a decision tree, I list in the ``case`` statement days from 1 to 7, and for every value I do something:
+
   - If day is 1 (Monday), I go to work
   - If day is 2, I do something else
   - ...

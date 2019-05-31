@@ -1,0 +1,106 @@
+﻿FUNCTION_BLOCK "FB_Cylinder"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      iOpened : Bool;   // sensor cylinder opened
+      iClosed : Bool;   // sensor cylinder closed
+      iReqOpen : Bool;   // Open request (from HMI, or push button, or Robot,.....)
+      iReqClose : Bool;   // Close request (from HMI, or push button, or Robot,.....)
+      iCondOk : Bool;   // Condition ok (Emergency, Air, doors,....)
+      iTimeOpen : Time := T#10s;   // Time for openning time-out
+      iTimeClose : Time := T#10s;   // Time for closing time-out
+   END_VAR
+
+   VAR_OUTPUT 
+      oCmdOpen : Bool;   // output valve : Command close cylinder
+      oCmdClose : Bool;   // output valve : Command open cylinder
+      oActState : Int;   // Acutal state
+      oPrevState : Int;   // Previous stae
+   END_VAR
+
+   VAR 
+      timeOutOpenning {InstructionName := 'TON_TIME'; LibVersion := '1.0'} : TON_TIME;   // openning timer
+      timeOutClosing {InstructionName := 'TON_TIME'; LibVersion := '1.0'} : TON_TIME;   // closing timer
+   END_VAR
+
+   VAR CONSTANT 
+      sIDLE : Int := 1;   // Idle State
+      sALARM : Int := 2;
+      sREADY : Int := 10;
+      sCLOSED : Int := 20;
+      sOPENING : Int := 30;   // openning: during motion
+      sOPENED : Int := 40;   // openned: already opened
+      sCLOSING : Int := 50;
+   END_VAR
+
+
+BEGIN
+	// Cylinder state machine
+	// best way to implement a state machine is using CASE statment
+	// 
+	// Not complete
+	
+	#timeOutOpenning(IN:= (#oActState = #sOPENING),
+	                 PT:=#iTimeOpen);
+	
+	#timeOutClosing(IN:=#oActState = #sCLOSING,
+	                PT:=#iTimeClose);
+	
+	IF #timeOutClosing.Q OR #timeOutOpenning.Q OR #iCondOk=FALSE THEN
+	    #oActState := #sALARM;
+	END_IF;
+	
+	CASE #oActState OF
+	    #sIDLE:
+	        #oCmdClose := FALSE;
+	        #oCmdOpen := FALSE;
+	        IF #iOpened THEN
+	            #oPrevState := #oActState;
+	            #oActState := #sOPENED;
+	        ELSIF #iClosed THEN
+	            #oPrevState := #oActState;
+	            #oActState := #sCLOSED;
+	        ELSE
+	            #oPrevState := #oActState;
+	            #oActState := #sALARM;
+	        END_IF;
+	    #sALARM:
+	        IF #iReqClose THEN
+	            #oPrevState := #oActState;
+	            #oActState := #sCLOSING;
+	        ELSIF #iReqOpen THEN
+	            #oPrevState := #oActState;
+	            #oActState := #sOPENING;
+	        END_IF;
+	        
+	    #sCLOSED:
+	        IF #iReqOpen THEN
+	            #oPrevState := #oActState;
+	            #oActState := #sOPENING;
+	        END_IF;
+	    sOPENING:
+	        #oCmdOpen:=TRUE;
+	        #oCmdClose := FALSE;
+	        IF #iOpened THEN
+	            #oPrevState := #oActState;
+	            #oActState := #sOPENED;
+	        END_IF;
+	    sOPENED:
+	        IF #iReqClose THEN
+	            #oPrevState := #oActState;
+	            #oActState := #sCLOSING;
+	        END_IF;
+	    sCLOSING:
+	        #oCmdOpen:=FALSE;
+	        #oCmdClose := TRUE;
+	        IF #iClosed THEN
+	            #oPrevState := #oActState;
+	            #oActState := #sCLOSED;
+	        END_IF;
+	    ELSE  // Statement section ELSE
+	        #oPrevState := #sIDLE;
+	        #oActState:= #sIDLE;
+	END_CASE;
+	
+END_FUNCTION_BLOCK
+

@@ -1,0 +1,21 @@
+**************************
+More exercises solutions
+**************************
+
+State machine version of alternative motion
+=============================================
+
+Sequence
+===========
+
+Vending machine
+=================
+
+Unloading conveyor
+===================
+
+Vision system conveyor
+========================
+
+Turn table
+=============

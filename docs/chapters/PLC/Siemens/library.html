@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5. Library &mdash; Automation notes 0.6.0 documentation</title>
+  <title>11. Library &mdash; Automation notes 0.8.0 documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="6. State machine" href="fsm.html" />
-    <link rel="prev" title="4. Exercises" href="exercises.html" /> 
+    <link rel="next" title="12. Simple project" href="project.html" />
+    <link rel="prev" title="10. More exercises solutions" href="more-ex-solutions.html" /> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                0.6
+                0.8
               </div>
             
           
@@ -94,12 +94,16 @@
 <li class="toctree-l1"><a class="reference internal" href="s7-PLC.html">1. Siemens PLC first steps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="concepts.html">2. Fundamental concepts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="programming.html">3. Programming</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercises.html">4. Exercises</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fsm.html">6. State machine</a></li>
-<li class="toctree-l1"><a class="reference internal" href="turn-table.html">7. Turn table</a></li>
-<li class="toctree-l1"><a class="reference internal" href="style-guide.html">8. Style guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="project.html">9. Final project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style-guide.html">4. Style guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="badcode.html">5. Bad code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercises.html">6. Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solutions.html">7. Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fsm.html">8. State machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more-ex.html">9. More exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more-ex-solutions.html">10. More exercises solutions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11. Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">12. Simple project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="completeprg.html">13. Complete project</a></li>
 </ul>
 <p class="caption"><span class="caption-text">CoDeSys</span></p>
 <ul>
@@ -150,7 +154,7 @@
     
       <li><a href="../../../index.html">Docs</a> &raquo;</li>
         
-      <li>5. Library</li>
+      <li>11. Library</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -170,8 +174,35 @@
            <div itemprop="articleBody">
             
   <div class="section" id="library">
-<h1>5. Library<a class="headerlink" href="#library" title="Permalink to this headline">¶</a></h1>
-<p><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Library</span> <span class="pre">project</span></code></p>
+<h1>11. Library<a class="headerlink" href="#library" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-center" id="id1" style="width: 400px">
+<img alt="../../../_images/createLib.gif" src="../../../_images/createLib.gif" />
+<p class="caption"><span class="caption-text">Create a new library</span></p>
+</div>
+<div class="figure align-center" id="id2" style="width: 400px">
+<img alt="../../../_images/addFuncLib.gif" src="../../../_images/addFuncLib.gif" />
+<p class="caption"><span class="caption-text">Add function block (FB) and function (FC) to the library</span></p>
+</div>
+<div class="figure align-center" id="id3" style="width: 400px">
+<img alt="../../../_images/updateLib.gif" src="../../../_images/updateLib.gif" />
+<p class="caption"><span class="caption-text">Modify a function and update the global library</span></p>
+</div>
+<div class="figure align-center" id="id4" style="width: 400px">
+<img alt="../../../_images/openLib.gif" src="../../../_images/openLib.gif" />
+<p class="caption"><span class="caption-text">Open an existing library</span></p>
+</div>
+<p>Tia portal create a local copy of the functions from the <code class="docutils literal notranslate"><span class="pre">global</span> <span class="pre">library</span></code>.
+The functions are related to the <code class="docutils literal notranslate"><span class="pre">Project</span> <span class="pre">library</span></code>. When a function is modified is modified in the <code class="docutils literal notranslate"><span class="pre">Project</span> <span class="pre">library</span></code>.
+When modification is complete the <code class="docutils literal notranslate"><span class="pre">global</span> <span class="pre">library</span></code> can be updated from the <code class="docutils literal notranslate"><span class="pre">Project</span> <span class="pre">library</span></code></p>
+<div class="figure align-center" id="id5" style="width: 300px">
+<img alt="../../../_images/lib.png" src="../../../_images/lib.png" />
+<p class="caption"><span class="caption-text">Project library and Global libraries</span></p>
+</div>
+<p>A function can be separated from the library. Notice that the small triangle on the top right of the function icon disappear when the connection to the library is canceled.</p>
+<div class="figure align-center" style="width: 400px">
+<img alt="../../../_images/connection_lib.png" src="../../../_images/connection_lib.png" />
+</div>
+<p><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Library</span></code></p>
 </div>
 
 
@@ -182,10 +213,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="fsm.html" class="btn btn-neutral float-right" title="6. State machine" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="project.html" class="btn btn-neutral float-right" title="12. Simple project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="exercises.html" class="btn btn-neutral" title="4. Exercises" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="more-ex-solutions.html" class="btn btn-neutral" title="10. More exercises solutions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -216,7 +247,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../../',
-            VERSION:'0.6.0',
+            VERSION:'0.8.0',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

@@ -6,7 +6,7 @@
 Automation notes!
 ===================
 
-.. warning:: |today| Work in progress
+.. warning:: |today|
 
 .. note:: **Scientia potentia est**
 
@@ -32,15 +32,22 @@ Automation notes!
   chapters/PLC/Siemens/s7-PLC
   chapters/PLC/Siemens/concepts
   chapters/PLC/Siemens/programming
+  chapters/PLC/Siemens/style-guide
+  chapters/PLC/Siemens/badcode
+
   chapters/PLC/Siemens/exercises
-  chapters/PLC/Siemens/bistable_cylinder
-  chapters/PLC/Siemens/library
+  chapters/PLC/Siemens/solutions
 
   chapters/PLC/Siemens/fsm
-  chapters/PLC/Siemens/turn-table
-  
-  chapters/PLC/Siemens/style-guide
+  chapters/PLC/Siemens/more-ex
+  chapters/PLC/Siemens/more-ex-solutions
+
+  chapters/PLC/Siemens/library
   chapters/PLC/Siemens/project
+
+  chapters/PLC/Siemens/completeprg
+
+
 
 .. warning:: Work in progress
 

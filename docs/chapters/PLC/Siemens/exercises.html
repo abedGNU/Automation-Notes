@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>4. Exercises &mdash; Automation notes 0.6.0 documentation</title>
+  <title>6. Exercises &mdash; Automation notes 0.8.0 documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="5. Library" href="library.html" />
-    <link rel="prev" title="3. Programming" href="programming.html" /> 
+    <link rel="next" title="7. Solutions" href="solutions.html" />
+    <link rel="prev" title="5. Bad code" href="badcode.html" /> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                0.6
+                0.8
               </div>
             
           
@@ -94,22 +94,26 @@
 <li class="toctree-l1"><a class="reference internal" href="s7-PLC.html">1. Siemens PLC first steps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="concepts.html">2. Fundamental concepts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="programming.html">3. Programming</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Exercises</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#line-equation">4.1. Line equation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#rising-edge">4.2. Rising edge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#falling-edge">4.3. Falling Edge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#retentive-ton">4.4. Retentive TON</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#blink">4.5. Blink</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#bi-stable-cylinder">4.6. Bi-stable cylinder</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sequence">4.7. Sequence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#unloading-conveyor">4.8. Unloading conveyor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style-guide.html">4. Style guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="badcode.html">5. Bad code</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Exercises</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#line-equation">6.1. Line equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rising-edge">6.2. Rising edge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#falling-edge">6.3. Falling Edge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#retentive-ton">6.4. Retentive TON</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#blink">6.5. Blink</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#control-3-motors-sequencing-1">6.6. Control 3 motors sequencing (1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#control-3-motors-sequencing-2">6.7. Control 3 motors sequencing (2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bi-stable-cylinder">6.8. Bi-stable cylinder</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="library.html">5. Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fsm.html">6. State machine</a></li>
-<li class="toctree-l1"><a class="reference internal" href="turn-table.html">7. Turn table</a></li>
-<li class="toctree-l1"><a class="reference internal" href="style-guide.html">8. Style guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="project.html">9. Final project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solutions.html">7. Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fsm.html">8. State machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more-ex.html">9. More exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more-ex-solutions.html">10. More exercises solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library.html">11. Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">12. Simple project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="completeprg.html">13. Complete project</a></li>
 </ul>
 <p class="caption"><span class="caption-text">CoDeSys</span></p>
 <ul>
@@ -160,7 +164,7 @@
     
       <li><a href="../../../index.html">Docs</a> &raquo;</li>
         
-      <li>4. Exercises</li>
+      <li>6. Exercises</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -180,35 +184,35 @@
            <div itemprop="articleBody">
             
   <div class="section" id="exercises">
-<h1>4. Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h1>
+<h1>6. Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">We mean by function either FC or FB. Remember that an <code class="docutils literal notranslate"><span class="pre">FC</span></code> is a function without memory, it have only <code class="docutils literal notranslate"><span class="pre">temporary</span></code> variables.
 An <code class="docutils literal notranslate"><span class="pre">FB</span></code> is a function with memory, it have <code class="docutils literal notranslate"><span class="pre">static</span></code> variables.</p>
 </div>
 <div class="section" id="line-equation">
-<h2>4.1. Line equation<a class="headerlink" href="#line-equation" title="Permalink to this headline">¶</a></h2>
+<h2>6.1. Line equation<a class="headerlink" href="#line-equation" title="Permalink to this headline">¶</a></h2>
 <p>Analog signal need to be scaled to a physical unit in order to be understood. Usually analog sensors and actuators are modeled as linear systems.
 Write a function that map the value of an analog signal to a physical one (or from physical signal to analog one).
 For example, to map voltage to temperature, or to map current to pressure value, or to map a speed to voltage.</p>
 </div>
 <div class="section" id="rising-edge">
-<h2>4.2. Rising edge<a class="headerlink" href="#rising-edge" title="Permalink to this headline">¶</a></h2>
+<h2>6.2. Rising edge<a class="headerlink" href="#rising-edge" title="Permalink to this headline">¶</a></h2>
 <p>Write a function the detect the transition of a signal from 0 to 1. This function have the same functioning of the standard one <code class="docutils literal notranslate"><span class="pre">R_TRIG</span></code>.</p>
 </div>
 <div class="section" id="falling-edge">
-<h2>4.3. Falling Edge<a class="headerlink" href="#falling-edge" title="Permalink to this headline">¶</a></h2>
+<h2>6.3. Falling Edge<a class="headerlink" href="#falling-edge" title="Permalink to this headline">¶</a></h2>
 <p>Write a function the detect the transition of a signal from 1 to 0. This function have the same functioning of the standard one <code class="docutils literal notranslate"><span class="pre">F_TRIG</span></code>.</p>
 </div>
 <div class="section" id="retentive-ton">
-<h2>4.4. Retentive TON<a class="headerlink" href="#retentive-ton" title="Permalink to this headline">¶</a></h2>
+<h2>6.4. Retentive TON<a class="headerlink" href="#retentive-ton" title="Permalink to this headline">¶</a></h2>
 <p>Write a function that count the time if a signal is 1. If the signal go to zero the function should stop counting. If the signal return to one, the function should continue to count from the previous value. Refer to the following timing diagram.</p>
 <div class="figure align-center" style="width: 400px">
 <img alt="../../../_images/tonr.png" src="../../../_images/tonr.png" />
 </div>
 </div>
 <div class="section" id="blink">
-<h2>4.5. Blink<a class="headerlink" href="#blink" title="Permalink to this headline">¶</a></h2>
+<h2>6.5. Blink<a class="headerlink" href="#blink" title="Permalink to this headline">¶</a></h2>
 <p>Write a function that toggle an output, with a determined frequency. The duty cycle of the signal can be tuned.
 Remember the duty cycle is the time (or percentage) of the time when the signal is high. In this exercise use time not percentage.</p>
 <div class="figure align-center" id="id1" style="width: 400px">
@@ -216,21 +220,28 @@ Remember the duty cycle is the time (or percentage) of the time when the signal 
 <p class="caption"><span class="caption-text">Preset times tHigh (on) and tLow (off) can be set as desired</span></p>
 </div>
 </div>
+<div class="section" id="control-3-motors-sequencing-1">
+<h2>6.6. Control 3 motors sequencing (1)<a class="headerlink" href="#control-3-motors-sequencing-1" title="Permalink to this headline">¶</a></h2>
+<p>Write a program that will switch on two motors when the start switch is operated,
+then switch off one motor after 200 s and the other motor after a further 100 s. When
+both motors have been switched off, a third motor is to be switched on for 50 s. The cycle
+is then to repeat itself unless a stop switch has been activated.</p>
+</div>
+<div class="section" id="control-3-motors-sequencing-2">
+<h2>6.7. Control 3 motors sequencing (2)<a class="headerlink" href="#control-3-motors-sequencing-2" title="Permalink to this headline">¶</a></h2>
+<p>Write a ladder program to switch on a motor when the start switch is momentarily
+activated, with the motor remaining on for 50 s. At the end of that time a second
+motor is to be switched on for a further 50 s. A third motor is to be switched on 10 s
+before the second motor switches off and is to remain on for 50 s. The cycle is then
+to repeat itself unless a stop switch has been activated.</p>
+</div>
 <div class="section" id="bi-stable-cylinder">
-<h2>4.6. Bi-stable cylinder<a class="headerlink" href="#bi-stable-cylinder" title="Permalink to this headline">¶</a></h2>
+<h2>6.8. Bi-stable cylinder<a class="headerlink" href="#bi-stable-cylinder" title="Permalink to this headline">¶</a></h2>
 <p>Write a function that control a cylinder. Imagine all digital input and outputs that are necessary to the correct functioning of the cylinder, as also any other signal or variable (not only physical input or output).</p>
 <div class="figure align-center" id="id2" style="width: 400px">
 <span id="figcyldouble"></span><img alt="../../../_images/cyl_double.png" src="../../../_images/cyl_double.png" />
 <p class="caption"><span class="caption-text">Double acting cylinder</span></p>
 </div>
-</div>
-<div class="section" id="sequence">
-<h2>4.7. Sequence<a class="headerlink" href="#sequence" title="Permalink to this headline">¶</a></h2>
-<p>We have 2 pistons (cylinders) A and B. When piston A receive a command to open, when it is fully opened, piston B will open.
-After 3 seconds piston A will close. When piston A is closed, piston B will close.</p>
-</div>
-<div class="section" id="unloading-conveyor">
-<h2>4.8. Unloading conveyor<a class="headerlink" href="#unloading-conveyor" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -242,10 +253,10 @@ After 3 seconds piston A will close. When piston A is closed, piston B will clos
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="library.html" class="btn btn-neutral float-right" title="5. Library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="solutions.html" class="btn btn-neutral float-right" title="7. Solutions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="programming.html" class="btn btn-neutral" title="3. Programming" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="badcode.html" class="btn btn-neutral" title="5. Bad code" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -276,7 +287,7 @@ After 3 seconds piston A will close. When piston A is closed, piston B will clos
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../../',
-            VERSION:'0.6.0',
+            VERSION:'0.8.0',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

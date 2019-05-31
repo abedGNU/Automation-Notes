@@ -88,8 +88,6 @@ The standard IEC 61131-3 define 5 programming languages for PLC:
   - SFC : Sequential Fucntion Chart
   - FBD: Fucntion Block Diagram
 
-
-.. _figFunc:
 .. figure:: images/plc_lang.png
     :align: center
     :figwidth: 400px

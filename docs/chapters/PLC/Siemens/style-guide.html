@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>8. Style guide &mdash; Automation notes 0.6.0 documentation</title>
+  <title>4. Style guide &mdash; Automation notes 0.8.0 documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="9. Final project" href="project.html" />
-    <link rel="prev" title="7. Turn table" href="turn-table.html" /> 
+    <link rel="next" title="5. Bad code" href="badcode.html" />
+    <link rel="prev" title="3. Programming" href="programming.html" /> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                0.6
+                0.8
               </div>
             
           
@@ -94,27 +94,31 @@
 <li class="toctree-l1"><a class="reference internal" href="s7-PLC.html">1. Siemens PLC first steps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="concepts.html">2. Fundamental concepts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="programming.html">3. Programming</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercises.html">4. Exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="library.html">5. Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fsm.html">6. State machine</a></li>
-<li class="toctree-l1"><a class="reference internal" href="turn-table.html">7. Turn table</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Style guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#project-organization">8.1. Project organization</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#readme">8.1.1. README</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#changelog">8.1.2. CHANGELOG</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#flowchart-or-uml">8.1.3. Flowchart or UML</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Style guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#project-organization">4.1. Project organization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#readme">4.1.1. README</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changelog">4.1.2. CHANGELOG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flowchart-or-uml">4.1.3. Flowchart or UML</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#abbreviations">8.2. Abbreviations</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#prefixes">8.2.1. Prefixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#abbreviations">4.2. Abbreviations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prefixes">4.2.1. Prefixes</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#names">8.3. Names</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#rules">8.4. Rules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#software-organization">8.5. Software organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#names">4.3. Names</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rules">4.4. Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#software-organization">4.5. Software organization</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="project.html">9. Final project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="badcode.html">5. Bad code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercises.html">6. Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solutions.html">7. Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fsm.html">8. State machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more-ex.html">9. More exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more-ex-solutions.html">10. More exercises solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library.html">11. Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">12. Simple project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="completeprg.html">13. Complete project</a></li>
 </ul>
 <p class="caption"><span class="caption-text">CoDeSys</span></p>
 <ul>
@@ -165,7 +169,7 @@
     
       <li><a href="../../../index.html">Docs</a> &raquo;</li>
         
-      <li>8. Style guide</li>
+      <li>4. Style guide</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -185,9 +189,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="style-guide">
-<h1>8. Style guide<a class="headerlink" href="#style-guide" title="Permalink to this headline">¶</a></h1>
+<h1>4. Style guide<a class="headerlink" href="#style-guide" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="project-organization">
-<h2>8.1. Project organization<a class="headerlink" href="#project-organization" title="Permalink to this headline">¶</a></h2>
+<h2>4.1. Project organization<a class="headerlink" href="#project-organization" title="Permalink to this headline">¶</a></h2>
 <p>Every project should have:</p>
 <blockquote>
 <div><ul class="simple">
@@ -213,14 +217,14 @@ For example :</p>
 <li>A-JC-18-003-ROBOT04-2019-05-09-v0.0.1-Abed.zip</li>
 </ul>
 <div class="section" id="readme">
-<h3>8.1.1. README<a class="headerlink" href="#readme" title="Permalink to this headline">¶</a></h3>
+<h3>4.1.1. README<a class="headerlink" href="#readme" title="Permalink to this headline">¶</a></h3>
 <p>General informations about the project.</p>
 <p>References</p>
 <p>Special equipments</p>
 <p>Short description about the workflow</p>
 </div>
 <div class="section" id="changelog">
-<h3>8.1.2. CHANGELOG<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h3>
+<h3>4.1.2. CHANGELOG<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h3>
 <p>The version is : major.minor.patch</p>
 <p>The date is year-mont-day</p>
 <p>## [X.Y.Z] - aaaa-mm-dd Name(who)
@@ -238,13 +242,13 @@ for any bug fixes.
 in case of vulnerabilities.</p>
 </div>
 <div class="section" id="flowchart-or-uml">
-<h3>8.1.3. Flowchart or UML<a class="headerlink" href="#flowchart-or-uml" title="Permalink to this headline">¶</a></h3>
+<h3>4.1.3. Flowchart or UML<a class="headerlink" href="#flowchart-or-uml" title="Permalink to this headline">¶</a></h3>
 <p>Software used: <a class="reference external" href="https://www.yworks.com/products/yed/download">https://www.yworks.com/products/yed/download</a></p>
 <p>Every state machine should be illustrated in a chart (flowchart, uml,…).</p>
 </div>
 </div>
 <div class="section" id="abbreviations">
-<h2>8.2. Abbreviations<a class="headerlink" href="#abbreviations" title="Permalink to this headline">¶</a></h2>
+<h2>4.2. Abbreviations<a class="headerlink" href="#abbreviations" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Push button : pb, btn</li>
 <li>Lamp : lmp</li>
@@ -261,7 +265,7 @@ in case of vulnerabilities.</p>
 <li>Emergency : emrg, emr</li>
 </ul>
 <div class="section" id="prefixes">
-<h3>8.2.1. Prefixes<a class="headerlink" href="#prefixes" title="Permalink to this headline">¶</a></h3>
+<h3>4.2.1. Prefixes<a class="headerlink" href="#prefixes" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Input : i</li>
 <li>Output : q or o</li>
@@ -276,7 +280,7 @@ in case of vulnerabilities.</p>
 </div>
 </div>
 <div class="section" id="names">
-<h2>8.3. Names<a class="headerlink" href="#names" title="Permalink to this headline">¶</a></h2>
+<h2>4.3. Names<a class="headerlink" href="#names" title="Permalink to this headline">¶</a></h2>
 <p>S7 plc languages are not case sensitive, Button and button are the same variable.</p>
 <p>Use <code class="docutils literal notranslate"><span class="pre">camelCase</span></code> for primitive data types: bool, word, dword, int, dint, real.</p>
 <p>Use <code class="docutils literal notranslate"><span class="pre">PascalCase</span></code> for complex data types, and prefix them with the type:</p>
@@ -298,7 +302,7 @@ in case of vulnerabilities.</p>
 </div></blockquote>
 </div>
 <div class="section" id="rules">
-<h2>8.4. Rules<a class="headerlink" href="#rules" title="Permalink to this headline">¶</a></h2>
+<h2>4.4. Rules<a class="headerlink" href="#rules" title="Permalink to this headline">¶</a></h2>
 <p>Rungs or segments must have a title</p>
 <p>Rungs or segments should be commented in English, no Chinese nor other languages.</p>
 <p>Every variable should have:</p>
@@ -324,7 +328,7 @@ Cylinder commands are: Open, close.
 Don’t use Forward, backward, up, down, left, right,…</div></blockquote>
 </div>
 <div class="section" id="software-organization">
-<h2>8.5. Software organization<a class="headerlink" href="#software-organization" title="Permalink to this headline">¶</a></h2>
+<h2>4.5. Software organization<a class="headerlink" href="#software-organization" title="Permalink to this headline">¶</a></h2>
 <p>Functions (FB, FC) are the main building block of any program. The start point of S7 PLC is <code class="docutils literal notranslate"><span class="pre">OB1</span></code>, in <code class="docutils literal notranslate"><span class="pre">OB1</span></code> we should find only function calls. In <code class="docutils literal notranslate"><span class="pre">OB1</span></code> There is no business logic.</p>
 <p>Every station should have is own main <code class="docutils literal notranslate"><span class="pre">FB</span></code> and global <code class="docutils literal notranslate"><span class="pre">DB</span></code> and instance <code class="docutils literal notranslate"><span class="pre">DB</span></code>.
 If the station have more then one component, every component should have its own <code class="docutils literal notranslate"><span class="pre">FB</span></code>. The components’s <code class="docutils literal notranslate"><span class="pre">FB</span></code> should be instantiated in the <code class="docutils literal notranslate"><span class="pre">STAT</span></code> section of the parent <code class="docutils literal notranslate"><span class="pre">FB</span></code>. All functions and DBs of a station should be grouped in a folder.</p>
@@ -344,10 +348,10 @@ If the station have more then one component, every component should have its own
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="project.html" class="btn btn-neutral float-right" title="9. Final project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="badcode.html" class="btn btn-neutral float-right" title="5. Bad code" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="turn-table.html" class="btn btn-neutral" title="7. Turn table" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="programming.html" class="btn btn-neutral" title="3. Programming" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -378,7 +382,7 @@ If the station have more then one component, every component should have its own
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../../',
-            VERSION:'0.6.0',
+            VERSION:'0.8.0',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

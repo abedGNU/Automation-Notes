@@ -1,0 +1,342 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5. Bad code &mdash; Automation notes 0.8.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="6. Exercises" href="exercises.html" />
+    <link rel="prev" title="4. Style guide" href="style-guide.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Automation notes
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Basics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basics/basics.html">1. Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/programming.html">2. Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/c.html">3. C language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/OS.html">4. Operating systems and firmwares</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Siemens PLC</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="s7-PLC.html">1. Siemens PLC first steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="concepts.html">2. Fundamental concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="programming.html">3. Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style-guide.html">4. Style guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Bad code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#naming">5.1. Naming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#code-reuse">5.2. Code reuse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#general">5.3. General</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="exercises.html">6. Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solutions.html">7. Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fsm.html">8. State machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more-ex.html">9. More exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more-ex-solutions.html">10. More exercises solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library.html">11. Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">12. Simple project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="completeprg.html">13. Complete project</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CoDeSys</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/iec61131-3.html">1. IEC 61131-3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/codesys.html">2. CoDeSys</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Automation notes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>5. Bad code</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/chapters/PLC/Siemens/badcode.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="bad-code">
+<h1>5. Bad code<a class="headerlink" href="#bad-code" title="Permalink to this headline">¶</a></h1>
+<p>PLC programs usually are not structured well, neither follow best practice in software engineering.
+I notice that more than 95% of PLC programs are written in a horrible way, those are called bad code.</p>
+<p>More experience a traditional PLC programmers have, more bad code he write. Reasons can vary from the leak of academic formation to other reasons.
+Even computer engineers write too bad code.</p>
+<p>The main reason of bad code in PLC are come from the 2 dominant platforms: Siemens S7 and Allen Bradley PLCs.
+These platforms have a bad IDE and program organization. Even with Siemens new platform, TIA Portal, few things changed.</p>
+<p>When someone begin to learn with these platforms, bad habits will accompany him for all his career.
+Using only one language or similar platform, is always a penalty.</p>
+<p>A more advanced PLC based on CoDeSys and the standard IEC-61131, let you program a PLC like programming in C++.
+The IEC-61131 <code class="docutils literal notranslate"><span class="pre">ST</span></code> language have more features than Siemens and Allen Bradley PLCs.
+It support enumerations, classes, inheritances. Languages are variable name based, not address based like Siemens.</p>
+<p>Tia portal become variable based, compared to the old Step 7. But Siemens keep function and data block numbers for an unknown reason.
+The reason can’t be retro compatibility, if you open a project in Tia Portal 15, you can anymore open it in TIA portal 14.</p>
+<div class="section" id="naming">
+<h2>5.1. Naming<a class="headerlink" href="#naming" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id1" style="width: 400px">
+<img alt="../../../_images/bad_name_struct.png" src="../../../_images/bad_name_struct.png" />
+<p class="caption"><span class="caption-text">Groups and functions without a good name</span></p>
+</div>
+<div class="figure align-center" id="id2" style="width: 400px">
+<img alt="../../../_images/bad_name_tags1.png" src="../../../_images/bad_name_tags1.png" />
+<p class="caption"><span class="caption-text">Variables without name neither comment</span></p>
+</div>
+<div class="figure align-center" id="id3" style="width: 400px">
+<img alt="../../../_images/bad_name_tags2.png" src="../../../_images/bad_name_tags2.png" />
+<p class="caption"><span class="caption-text">How can remember the meaning of the variables?</span></p>
+</div>
+<div class="figure align-center" id="id4" style="width: 400px">
+<img alt="../../../_images/bad_name_tags3.png" src="../../../_images/bad_name_tags3.png" />
+<p class="caption"><span class="caption-text">How can remember the meaning of the variables?</span></p>
+</div>
+<div class="figure align-center" id="id5" style="width: 400px">
+<img alt="../../../_images/bad_name_tags4.png" src="../../../_images/bad_name_tags4.png" />
+<p class="caption"><span class="caption-text">No significant name</span></p>
+</div>
+<div class="figure align-center" id="id6" style="width: 400px">
+<img alt="../../../_images/bad_name_states1.png" src="../../../_images/bad_name_states1.png" />
+<p class="caption"><span class="caption-text">State machine without state name neither comment</span></p>
+</div>
+<div class="figure align-center" id="id7" style="width: 400px">
+<img alt="../../../_images/bad_name_states2.png" src="../../../_images/bad_name_states2.png" />
+<p class="caption"><span class="caption-text">State machine without state name neither comment</span></p>
+</div>
+</div>
+<div class="section" id="code-reuse">
+<h2>5.2. Code reuse<a class="headerlink" href="#code-reuse" title="Permalink to this headline">¶</a></h2>
+<p>A project have three cells, every cell have two rotating tables. The following snippet shown two function blocks without local variables for two tables in the same cell.</p>
+<div class="figure align-center" id="id8" style="width: 400px">
+<img alt="../../../_images/table_1.png" src="../../../_images/table_1.png" />
+<p class="caption"><span class="caption-text">Two tables in Project 1</span></p>
+</div>
+<div class="figure align-center" id="id9" style="width: 400px">
+<img alt="../../../_images/table_2.png" src="../../../_images/table_2.png" />
+<p class="caption"><span class="caption-text">Two tables in Project 1</span></p>
+</div>
+<p>For the project the same logic was written six times at the beginning. During debugging a lot of malfunctioning were found.
+The six function blocks was modified again six times.</p>
+<p>Another project have similar tables, the logic was written also 2 times for the 2 tables.
+In this project we can see also some difference in the program, even if the two tables should have the same logic.</p>
+<div class="figure align-center" id="id10" style="width: 400px">
+<img alt="../../../_images/table_3.png" src="../../../_images/table_3.png" />
+<p class="caption"><span class="caption-text">Two tables in Project 2</span></p>
+</div>
+<p>At the end the logic of the turntable was written 8 times, and debugged more than 100 times. You can imagine how much time were wasted.</p>
+<p>The logic of the same device in two different projects was written 2 times. If a function block with local variable was used, code duplication were avoided and time were saved.</p>
+<div class="figure align-center" id="id11" style="width: 400px">
+<img alt="../../../_images/shutter_1.png" src="../../../_images/shutter_1.png" />
+<p class="caption"><span class="caption-text">Rolling shutter in Project 1</span></p>
+</div>
+<div class="figure align-center" id="id12" style="width: 400px">
+<img alt="../../../_images/shutter_2.png" src="../../../_images/shutter_2.png" />
+<p class="caption"><span class="caption-text">Rolling shutter in Project 2</span></p>
+</div>
+</div>
+<div class="section" id="general">
+<h2>5.3. General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<p>In the following picture, a variable was assigned to other different variables, in different functions, before arriving to the output.
+During debugging is difficult to find any bug. Anyway this have no meaning.</p>
+<div class="figure align-center" style="width: 400px">
+<img alt="../../../_images/no_direct_assign.png" src="../../../_images/no_direct_assign.png" />
+</div>
+<p>When transferring data, e.g. from a recipe, group the variables in a <code class="docutils literal notranslate"><span class="pre">struct</span></code> and use block transfer.
+When dealing with assignments, it is better to use ST language than Ladder.</p>
+<div class="figure align-center" style="width: 500px">
+<img alt="../../../_images/use_structure_udt.png" src="../../../_images/use_structure_udt.png" />
+</div>
+<p>Two much conditions are present in this rung. When a rung become big, bigger than the screen it become difficult to debug.</p>
+<div class="figure align-center" style="width: 400px">
+<img alt="../../../_images/too_mcuh_conditions.png" src="../../../_images/too_mcuh_conditions.png" />
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="exercises.html" class="btn btn-neutral float-right" title="6. Exercises" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="style-guide.html" class="btn btn-neutral" title="4. Style guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : Creative Commons License 2019, Abed.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.8.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
