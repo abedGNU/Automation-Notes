@@ -1,0 +1,289 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.12. Simple project &mdash; Automation notes 0.9.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="2.13. Complete project" href="completeprg.html" />
+    <link rel="prev" title="2.11. Create a library" href="library.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Automation notes
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Automation notes</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basics/index.html">1. Basics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">2. Siemens PLC</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="s7-PLC.html">2.1. Siemens PLC first steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts.html">2.2. Fundamental concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programming.html">2.3. Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="style-guide.html">2.4. Style guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="badcode.html">2.5. Bad code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises.html">2.6. Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises-solutions.html">2.7. Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsm.html">2.8. State machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="more-ex.html">2.9. More exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="more-ex-solutions.html">2.10. More exercises solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library.html">2.11. Create a library</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.12. Simple project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#turn-table">2.12.1. Turn table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cnc-machine">2.12.2. CNC machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exit-conveyor">2.12.3. Exit conveyor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#robot">2.12.4. Robot</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="completeprg.html">2.13. Complete project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/index.html">3. CoDeSys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../s7-Library/index.html">4. S7 Library</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Automation notes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">2. Siemens PLC</a> &raquo;</li>
+        
+      <li>2.12. Simple project</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/chapters/PLC/Siemens/project.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="simple-project">
+<h1>2.12. Simple project<a class="headerlink" href="#simple-project" title="Permalink to this headline">¶</a></h1>
+<p><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Exercises</span> <span class="pre">solutions</span></code></p>
+<p>The layout of this project is shown in the following image:</p>
+<div class="figure align-center" id="id1" style="width: 500px">
+<img alt="../../../_images/simple_project.png" src="../../../_images/simple_project.png" />
+<p class="caption"><span class="caption-text">Turn table (1) with 2 positions, CNC machine (2) with 2 position for loading and unloading, exit conveyor (3) and industrial robot (4)</span></p>
+</div>
+<p>The process flow should be clear, the robot take a raw part from the turn table and put it in the CNC machine, in the loading position L. Then take the machined part from the unloading position U, and put it on the exit conveyor. The cycle continue in this way. The external position of the table is loaded by a person.</p>
+<p>In the previous exercise we already write the function blocks for the conveyor and turn table, feel free to modify the logic if necessary, if you didn’t consider some situation before.
+The goal of this project is to show how to organize the software.</p>
+<p>the layout represent a <code class="docutils literal notranslate"><span class="pre">cell</span></code>. In this cell we can identify three <code class="docutils literal notranslate"><span class="pre">stations</span></code>: Turntable, machine and conveyor.
+Stations normally are independent from each others. For example the conveyor don’t care neither need to know anything about the turntable neither the machine, and vice versa.
+The robot is the only connection between all stations.</p>
+<p>From this point of view we can write the logic of every station independently from other stations. This is the approach taken also when writing the logic of very big production lines: break it down and you will see that a very complicated production line will be easy to implement. Every station have it sown defined job.</p>
+<p>At this point we have one cell, three station and one robot. If the PLC control more than one cell, every cell should have its own folder. In this project, we have only one cell and one PLC. It is optional to create a cell folder. Keep in mind always future integration, so never limit your software to the current situation.</p>
+<p>Three folders are created for every station and one folder for the robot. another folder can be created for general management of the cell.</p>
+<p>Every station has it own main function and main global data block and instance data block.</p>
+<p>A folder called <code class="docutils literal notranslate"><span class="pre">_Library</span></code> is created, where general functions will be placed. In the previous chapter we see how to create an S7 library. We will add that library to the project and use conveyor and turntable FBs from it.</p>
+<div class="figure align-center" style="width: 500px">
+<img alt="../../../_images/project_org.png" src="../../../_images/project_org.png" />
+</div>
+<p>OB1 must contain only function calls. In the following image we can see the call to other functions.
+It is better to use SCL to call other functions because it is more compact. Notice the name of the function calls in SCL and in Ladder.</p>
+<div class="figure align-center" style="width: 600px">
+<img alt="../../../_images/ob1_structure.png" src="../../../_images/ob1_structure.png" />
+</div>
+<p>The main function blocks of the station, should not have input neither outputs. The call should appear on one line.</p>
+<p>In the following sections we will examine every station. The developlent will be done without caring too much about where the physical IO are connected.
+As we think always in local variables at the beginning, we don’t care where <code class="docutils literal notranslate"><span class="pre">I</span></code> and <code class="docutils literal notranslate"><span class="pre">Q</span></code> are assigned. Connecting those IO will be done when the logic is completed.
+Of course we need to know which IO we have in order to avoid to invent our own project. Electrical drawing should be always consulted.</p>
+<div class="section" id="turn-table">
+<h2>2.12.1. Turn table<a class="headerlink" href="#turn-table" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="cnc-machine">
+<h2>2.12.2. CNC machine<a class="headerlink" href="#cnc-machine" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="exit-conveyor">
+<h2>2.12.3. Exit conveyor<a class="headerlink" href="#exit-conveyor" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="robot">
+<h2>2.12.4. Robot<a class="headerlink" href="#robot" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="completeprg.html" class="btn btn-neutral float-right" title="2.13. Complete project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="library.html" class="btn btn-neutral" title="2.11. Create a library" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : Creative Commons License 2019, Abed.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.9.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
