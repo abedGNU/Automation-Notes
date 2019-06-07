@@ -1,0 +1,310 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.6. Exercises &mdash; Automation notes 0.9.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="2.7. Solutions" href="exercises-solutions.html" />
+    <link rel="prev" title="2.5. Bad code" href="badcode.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Automation notes
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Automation notes</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basics/index.html">1. Basics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">2. Siemens PLC</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="s7-PLC.html">2.1. Siemens PLC first steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts.html">2.2. Fundamental concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programming.html">2.3. Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="style-guide.html">2.4. Style guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="badcode.html">2.5. Bad code</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.6. Exercises</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#line-equation">2.6.1. Line equation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rising-edge">2.6.2. Rising edge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#falling-edge">2.6.3. Falling Edge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#retentive-ton">2.6.4. Retentive TON</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#blink">2.6.5. Blink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#control-3-motors-sequencing-1">2.6.6. Control 3 motors sequencing (1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#control-3-motors-sequencing-2">2.6.7. Control 3 motors sequencing (2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bi-stable-cylinder">2.6.8. Bi-stable cylinder</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="exercises-solutions.html">2.7. Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsm.html">2.8. State machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="more-ex.html">2.9. More exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="more-ex-solutions.html">2.10. More exercises solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library.html">2.11. Create a library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project.html">2.12. Simple project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="completeprg.html">2.13. Complete project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/index.html">3. CoDeSys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../s7-Library/index.html">4. S7 Library</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Automation notes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">2. Siemens PLC</a> &raquo;</li>
+        
+      <li>2.6. Exercises</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/chapters/PLC/Siemens/exercises.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="exercises">
+<h1>2.6. Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">We mean by function either FC or FB. Remember that an <code class="docutils literal notranslate"><span class="pre">FC</span></code> is a function without memory, it have only <code class="docutils literal notranslate"><span class="pre">temporary</span></code> variables.
+An <code class="docutils literal notranslate"><span class="pre">FB</span></code> is a function with memory, it have <code class="docutils literal notranslate"><span class="pre">static</span></code> variables.</p>
+</div>
+<div class="section" id="line-equation">
+<h2>2.6.1. Line equation<a class="headerlink" href="#line-equation" title="Permalink to this headline">¶</a></h2>
+<p>Analog signal need to be scaled to a physical unit in order to be understood. Usually analog sensors and actuators are modeled as linear systems.
+Write a function that map the value of an analog signal to a physical one (or from physical signal to analog one).
+For example, to map voltage to temperature, or to map current to pressure value, or to map a speed to voltage.</p>
+</div>
+<div class="section" id="rising-edge">
+<h2>2.6.2. Rising edge<a class="headerlink" href="#rising-edge" title="Permalink to this headline">¶</a></h2>
+<p>Write a function the detect the transition of a signal from 0 to 1. This function have the same functioning of the standard one <code class="docutils literal notranslate"><span class="pre">R_TRIG</span></code>.</p>
+</div>
+<div class="section" id="falling-edge">
+<h2>2.6.3. Falling Edge<a class="headerlink" href="#falling-edge" title="Permalink to this headline">¶</a></h2>
+<p>Write a function the detect the transition of a signal from 1 to 0. This function have the same functioning of the standard one <code class="docutils literal notranslate"><span class="pre">F_TRIG</span></code>.</p>
+</div>
+<div class="section" id="retentive-ton">
+<h2>2.6.4. Retentive TON<a class="headerlink" href="#retentive-ton" title="Permalink to this headline">¶</a></h2>
+<p>Write a function that count the time if a signal is 1. If the signal go to zero the function should stop counting. If the signal return to one, the function should continue to count from the previous value. Refer to the following timing diagram.</p>
+<div class="figure align-center" style="width: 400px">
+<img alt="../../../_images/tonr.png" src="../../../_images/tonr.png" />
+</div>
+</div>
+<div class="section" id="blink">
+<h2>2.6.5. Blink<a class="headerlink" href="#blink" title="Permalink to this headline">¶</a></h2>
+<p>Write a function that toggle an output, with a determined frequency. The duty cycle of the signal can be tuned.
+Remember the duty cycle is the time (or percentage) of the time when the signal is high. In this exercise use time not percentage.</p>
+<div class="figure align-center" id="id1" style="width: 400px">
+<img alt="../../../_images/blink.png" src="../../../_images/blink.png" />
+<p class="caption"><span class="caption-text">Preset times tHigh (on) and tLow (off) can be set as desired</span></p>
+</div>
+</div>
+<div class="section" id="control-3-motors-sequencing-1">
+<h2>2.6.6. Control 3 motors sequencing (1)<a class="headerlink" href="#control-3-motors-sequencing-1" title="Permalink to this headline">¶</a></h2>
+<p>Write a program that will switch on two motors when the start switch is operated,
+then switch off one motor after 200 s and the other motor after a further 100 s. When
+both motors have been switched off, a third motor is to be switched on for 50 s. The cycle
+is then to repeat itself unless a stop switch has been activated.</p>
+</div>
+<div class="section" id="control-3-motors-sequencing-2">
+<h2>2.6.7. Control 3 motors sequencing (2)<a class="headerlink" href="#control-3-motors-sequencing-2" title="Permalink to this headline">¶</a></h2>
+<p>Write a ladder program to switch on a motor when the start switch is momentarily
+activated, with the motor remaining on for 50 s. At the end of that time a second
+motor is to be switched on for a further 50 s. A third motor is to be switched on 10 s
+before the second motor switches off and is to remain on for 50 s. The cycle is then
+to repeat itself unless a stop switch has been activated.</p>
+</div>
+<div class="section" id="bi-stable-cylinder">
+<h2>2.6.8. Bi-stable cylinder<a class="headerlink" href="#bi-stable-cylinder" title="Permalink to this headline">¶</a></h2>
+<p>Write a function that control a cylinder. Imagine all digital input and outputs that are necessary to the correct functioning of the cylinder, as also any other signal or variable (not only physical input or output).</p>
+<div class="figure align-center" id="id2" style="width: 400px">
+<span id="figcyldouble"></span><img alt="../../../_images/cyl_double.png" src="../../../_images/cyl_double.png" />
+<p class="caption"><span class="caption-text">Double acting cylinder</span></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="exercises-solutions.html" class="btn btn-neutral float-right" title="2.7. Solutions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="badcode.html" class="btn btn-neutral" title="2.5. Bad code" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : Creative Commons License 2019, Abed.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.9.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
