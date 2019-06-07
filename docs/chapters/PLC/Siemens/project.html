@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>12. Simple project &mdash; Automation notes 0.8.0 documentation</title>
+  <title>2.12. Simple project &mdash; Automation notes 0.9.0 documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="13. Complete project" href="completeprg.html" />
-    <link rel="prev" title="11. Library" href="library.html" /> 
+    <link rel="next" title="2.13. Complete project" href="completeprg.html" />
+    <link rel="prev" title="2.11. Create a library" href="library.html" /> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                0.8
+                0.9
               </div>
             
           
@@ -82,39 +82,33 @@
               
             
             
-              <p class="caption"><span class="caption-text">Basics</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../basics/basics.html">1. Basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basics/programming.html">2. Programming</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basics/c.html">3. C language</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basics/OS.html">4. Operating systems and firmwares</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Siemens PLC</span></p>
+              <p class="caption"><span class="caption-text">Automation notes</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="s7-PLC.html">1. Siemens PLC first steps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="concepts.html">2. Fundamental concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="programming.html">3. Programming</a></li>
-<li class="toctree-l1"><a class="reference internal" href="style-guide.html">4. Style guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="badcode.html">5. Bad code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercises.html">6. Exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solutions.html">7. Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fsm.html">8. State machine</a></li>
-<li class="toctree-l1"><a class="reference internal" href="more-ex.html">9. More exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="more-ex-solutions.html">10. More exercises solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="library.html">11. Library</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">12. Simple project</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#turn-table">12.1. Turn table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#cnc-machine">12.2. CNC machine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#exit-conveyor">12.3. Exit conveyor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#robot">12.4. Robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/index.html">1. Basics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">2. Siemens PLC</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="s7-PLC.html">2.1. Siemens PLC first steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts.html">2.2. Fundamental concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programming.html">2.3. Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="style-guide.html">2.4. Style guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="badcode.html">2.5. Bad code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises.html">2.6. Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises-solutions.html">2.7. Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsm.html">2.8. State machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="more-ex.html">2.9. More exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="more-ex-solutions.html">2.10. More exercises solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library.html">2.11. Create a library</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.12. Simple project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#turn-table">2.12.1. Turn table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cnc-machine">2.12.2. CNC machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exit-conveyor">2.12.3. Exit conveyor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#robot">2.12.4. Robot</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="completeprg.html">13. Complete project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="completeprg.html">2.13. Complete project</a></li>
 </ul>
-<p class="caption"><span class="caption-text">CoDeSys</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/iec61131-3.html">1. IEC 61131-3</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/codesys.html">2. CoDeSys</a></li>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/index.html">3. CoDeSys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../s7-Library/index.html">4. S7 Library</a></li>
 </ul>
 
             
@@ -160,7 +154,9 @@
     
       <li><a href="../../../index.html">Docs</a> &raquo;</li>
         
-      <li>12. Simple project</li>
+          <li><a href="index.html">2. Siemens PLC</a> &raquo;</li>
+        
+      <li>2.12. Simple project</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -180,7 +176,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="simple-project">
-<h1>12. Simple project<a class="headerlink" href="#simple-project" title="Permalink to this headline">¶</a></h1>
+<h1>2.12. Simple project<a class="headerlink" href="#simple-project" title="Permalink to this headline">¶</a></h1>
 <p><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Exercises</span> <span class="pre">solutions</span></code></p>
 <p>The layout of this project is shown in the following image:</p>
 <div class="figure align-center" id="id1" style="width: 500px">
@@ -211,16 +207,16 @@ It is better to use SCL to call other functions because it is more compact. Noti
 As we think always in local variables at the beginning, we don’t care where <code class="docutils literal notranslate"><span class="pre">I</span></code> and <code class="docutils literal notranslate"><span class="pre">Q</span></code> are assigned. Connecting those IO will be done when the logic is completed.
 Of course we need to know which IO we have in order to avoid to invent our own project. Electrical drawing should be always consulted.</p>
 <div class="section" id="turn-table">
-<h2>12.1. Turn table<a class="headerlink" href="#turn-table" title="Permalink to this headline">¶</a></h2>
+<h2>2.12.1. Turn table<a class="headerlink" href="#turn-table" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="cnc-machine">
-<h2>12.2. CNC machine<a class="headerlink" href="#cnc-machine" title="Permalink to this headline">¶</a></h2>
+<h2>2.12.2. CNC machine<a class="headerlink" href="#cnc-machine" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="exit-conveyor">
-<h2>12.3. Exit conveyor<a class="headerlink" href="#exit-conveyor" title="Permalink to this headline">¶</a></h2>
+<h2>2.12.3. Exit conveyor<a class="headerlink" href="#exit-conveyor" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="robot">
-<h2>12.4. Robot<a class="headerlink" href="#robot" title="Permalink to this headline">¶</a></h2>
+<h2>2.12.4. Robot<a class="headerlink" href="#robot" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -232,10 +228,10 @@ Of course we need to know which IO we have in order to avoid to invent our own p
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="completeprg.html" class="btn btn-neutral float-right" title="13. Complete project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="completeprg.html" class="btn btn-neutral float-right" title="2.13. Complete project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="library.html" class="btn btn-neutral" title="11. Library" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="library.html" class="btn btn-neutral" title="2.11. Create a library" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -266,7 +262,7 @@ Of course we need to know which IO we have in order to avoid to invent our own p
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../../',
-            VERSION:'0.8.0',
+            VERSION:'0.9.0',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

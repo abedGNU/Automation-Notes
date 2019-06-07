@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>10. More exercises solutions &mdash; Automation notes 0.8.0 documentation</title>
+  <title>2.10. More exercises solutions &mdash; Automation notes 0.9.0 documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="11. Library" href="library.html" />
-    <link rel="prev" title="9. More exercises" href="more-ex.html" /> 
+    <link rel="next" title="2.11. Create a library" href="library.html" />
+    <link rel="prev" title="2.9. More exercises" href="more-ex.html" /> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                0.8
+                0.9
               </div>
             
           
@@ -82,41 +82,35 @@
               
             
             
-              <p class="caption"><span class="caption-text">Basics</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../basics/basics.html">1. Basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basics/programming.html">2. Programming</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basics/c.html">3. C language</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basics/OS.html">4. Operating systems and firmwares</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Siemens PLC</span></p>
+              <p class="caption"><span class="caption-text">Automation notes</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="s7-PLC.html">1. Siemens PLC first steps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="concepts.html">2. Fundamental concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="programming.html">3. Programming</a></li>
-<li class="toctree-l1"><a class="reference internal" href="style-guide.html">4. Style guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="badcode.html">5. Bad code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercises.html">6. Exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solutions.html">7. Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fsm.html">8. State machine</a></li>
-<li class="toctree-l1"><a class="reference internal" href="more-ex.html">9. More exercises</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">10. More exercises solutions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#state-machine-version-of-alternative-motion">10.1. State machine version of alternative motion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sequence">10.2. Sequence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#vending-machine">10.3. Vending machine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#unloading-conveyor">10.4. Unloading conveyor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#vision-system-conveyor">10.5. Vision system conveyor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#turn-table">10.6. Turn table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/index.html">1. Basics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">2. Siemens PLC</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="s7-PLC.html">2.1. Siemens PLC first steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts.html">2.2. Fundamental concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programming.html">2.3. Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="style-guide.html">2.4. Style guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="badcode.html">2.5. Bad code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises.html">2.6. Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises-solutions.html">2.7. Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsm.html">2.8. State machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="more-ex.html">2.9. More exercises</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.10. More exercises solutions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#state-machine-version-of-alternative-motion">2.10.1. State machine version of alternative motion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sequence">2.10.2. Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vending-machine">2.10.3. Vending machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#unloading-conveyor">2.10.4. Unloading conveyor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vision-system-conveyor">2.10.5. Vision system conveyor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#turn-table">2.10.6. Turn table</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="library.html">11. Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="project.html">12. Simple project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="completeprg.html">13. Complete project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library.html">2.11. Create a library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project.html">2.12. Simple project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="completeprg.html">2.13. Complete project</a></li>
 </ul>
-<p class="caption"><span class="caption-text">CoDeSys</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/iec61131-3.html">1. IEC 61131-3</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/codesys.html">2. CoDeSys</a></li>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/index.html">3. CoDeSys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../s7-Library/index.html">4. S7 Library</a></li>
 </ul>
 
             
@@ -162,7 +156,9 @@
     
       <li><a href="../../../index.html">Docs</a> &raquo;</li>
         
-      <li>10. More exercises solutions</li>
+          <li><a href="index.html">2. Siemens PLC</a> &raquo;</li>
+        
+      <li>2.10. More exercises solutions</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -182,24 +178,28 @@
            <div itemprop="articleBody">
             
   <div class="section" id="more-exercises-solutions">
-<h1>10. More exercises solutions<a class="headerlink" href="#more-exercises-solutions" title="Permalink to this headline">¶</a></h1>
+<h1>2.10. More exercises solutions<a class="headerlink" href="#more-exercises-solutions" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Complete and tested solution can be found in the OpenLib Library</p>
+</div>
 <div class="section" id="state-machine-version-of-alternative-motion">
-<h2>10.1. State machine version of alternative motion<a class="headerlink" href="#state-machine-version-of-alternative-motion" title="Permalink to this headline">¶</a></h2>
+<h2>2.10.1. State machine version of alternative motion<a class="headerlink" href="#state-machine-version-of-alternative-motion" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="sequence">
-<h2>10.2. Sequence<a class="headerlink" href="#sequence" title="Permalink to this headline">¶</a></h2>
+<h2>2.10.2. Sequence<a class="headerlink" href="#sequence" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="vending-machine">
-<h2>10.3. Vending machine<a class="headerlink" href="#vending-machine" title="Permalink to this headline">¶</a></h2>
+<h2>2.10.3. Vending machine<a class="headerlink" href="#vending-machine" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="unloading-conveyor">
-<h2>10.4. Unloading conveyor<a class="headerlink" href="#unloading-conveyor" title="Permalink to this headline">¶</a></h2>
+<h2>2.10.4. Unloading conveyor<a class="headerlink" href="#unloading-conveyor" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="vision-system-conveyor">
-<h2>10.5. Vision system conveyor<a class="headerlink" href="#vision-system-conveyor" title="Permalink to this headline">¶</a></h2>
+<h2>2.10.5. Vision system conveyor<a class="headerlink" href="#vision-system-conveyor" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="turn-table">
-<h2>10.6. Turn table<a class="headerlink" href="#turn-table" title="Permalink to this headline">¶</a></h2>
+<h2>2.10.6. Turn table<a class="headerlink" href="#turn-table" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -211,10 +211,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="library.html" class="btn btn-neutral float-right" title="11. Library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="library.html" class="btn btn-neutral float-right" title="2.11. Create a library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="more-ex.html" class="btn btn-neutral" title="9. More exercises" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="more-ex.html" class="btn btn-neutral" title="2.9. More exercises" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -245,7 +245,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../../',
-            VERSION:'0.8.0',
+            VERSION:'0.9.0',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2. Fundamental concepts &mdash; Automation notes 0.8.0 documentation</title>
+  <title>2.2. Fundamental concepts &mdash; Automation notes 0.9.0 documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="3. Programming" href="programming.html" />
-    <link rel="prev" title="1. Siemens PLC first steps" href="s7-PLC.html" /> 
+    <link rel="next" title="2.3. Programming" href="programming.html" />
+    <link rel="prev" title="2.1. Siemens PLC first steps" href="s7-PLC.html" /> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                0.8
+                0.9
               </div>
             
           
@@ -82,48 +82,32 @@
               
             
             
-              <p class="caption"><span class="caption-text">Basics</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../basics/basics.html">1. Basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basics/programming.html">2. Programming</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basics/c.html">3. C language</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basics/OS.html">4. Operating systems and firmwares</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Siemens PLC</span></p>
+              <p class="caption"><span class="caption-text">Automation notes</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="s7-PLC.html">1. Siemens PLC first steps</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Fundamental concepts</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#memory-overview">2.1. Memory Overview</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#input-and-output">2.1.1. Input and Output</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#merker">2.1.2. Merker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#data-block">2.1.3. Data Block</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/index.html">1. Basics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">2. Siemens PLC</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="s7-PLC.html">2.1. Siemens PLC first steps</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.2. Fundamental concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#memory-overview">2.2.1. Memory Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pou-program-organization-unit">2.2.2. POU: Program Organization Unit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#plc-programming-languages">2.2.3. PLC programming languages</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#pou-program-organization-unit">2.2. POU: Program Organization Unit</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#organization-block">2.2.1. Organization Block</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#function">2.2.2. Function</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#function-block">2.2.3. Function Block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programming.html">2.3. Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="style-guide.html">2.4. Style guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="badcode.html">2.5. Bad code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises.html">2.6. Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises-solutions.html">2.7. Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsm.html">2.8. State machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="more-ex.html">2.9. More exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="more-ex-solutions.html">2.10. More exercises solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library.html">2.11. Create a library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project.html">2.12. Simple project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="completeprg.html">2.13. Complete project</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#plc-programming-languages">2.3. PLC programming languages</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="programming.html">3. Programming</a></li>
-<li class="toctree-l1"><a class="reference internal" href="style-guide.html">4. Style guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="badcode.html">5. Bad code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercises.html">6. Exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solutions.html">7. Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fsm.html">8. State machine</a></li>
-<li class="toctree-l1"><a class="reference internal" href="more-ex.html">9. More exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="more-ex-solutions.html">10. More exercises solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="library.html">11. Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="project.html">12. Simple project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="completeprg.html">13. Complete project</a></li>
-</ul>
-<p class="caption"><span class="caption-text">CoDeSys</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/iec61131-3.html">1. IEC 61131-3</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/codesys.html">2. CoDeSys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/index.html">3. CoDeSys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../s7-Library/index.html">4. S7 Library</a></li>
 </ul>
 
             
@@ -169,7 +153,9 @@
     
       <li><a href="../../../index.html">Docs</a> &raquo;</li>
         
-      <li>2. Fundamental concepts</li>
+          <li><a href="index.html">2. Siemens PLC</a> &raquo;</li>
+        
+      <li>2.2. Fundamental concepts</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -189,15 +175,15 @@
            <div itemprop="articleBody">
             
   <div class="section" id="fundamental-concepts">
-<h1>2. Fundamental concepts<a class="headerlink" href="#fundamental-concepts" title="Permalink to this headline">¶</a></h1>
+<h1>2.2. Fundamental concepts<a class="headerlink" href="#fundamental-concepts" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="memory-overview">
-<h2>2.1. Memory Overview<a class="headerlink" href="#memory-overview" title="Permalink to this headline">¶</a></h2>
+<h2>2.2.1. Memory Overview<a class="headerlink" href="#memory-overview" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center" id="id1" style="width: 600px">
 <span id="figmemoryaddress"></span><img alt="../../../_images/MemoryAddress.png" src="../../../_images/MemoryAddress.png" />
 <p class="caption"><span class="caption-text">Memory layout and addressing</span></p>
 </div>
 <div class="section" id="input-and-output">
-<h3>2.1.1. Input and Output<a class="headerlink" href="#input-and-output" title="Permalink to this headline">¶</a></h3>
+<h3>2.2.1.1. Input and Output<a class="headerlink" href="#input-and-output" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center" id="id2" style="width: 600px">
 <span id="figs7io"></span><img alt="../../../_images/s7-IO.png" src="../../../_images/s7-IO.png" />
 <p class="caption"><span class="caption-text">S7-1200 integrated IO mapping</span></p>
@@ -208,14 +194,14 @@
 </div>
 </div>
 <div class="section" id="merker">
-<h3>2.1.2. Merker<a class="headerlink" href="#merker" title="Permalink to this headline">¶</a></h3>
+<h3>2.2.1.2. Merker<a class="headerlink" href="#merker" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center" id="id4" style="width: 600px">
 <span id="figmerker"></span><img alt="../../../_images/merker.png" src="../../../_images/merker.png" />
 <p class="caption"><span class="caption-text">Merker</span></p>
 </div>
 </div>
 <div class="section" id="data-block">
-<h3>2.1.3. Data Block<a class="headerlink" href="#data-block" title="Permalink to this headline">¶</a></h3>
+<h3>2.2.1.3. Data Block<a class="headerlink" href="#data-block" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center" id="id5" style="width: 600px">
 <span id="figdbcreation"></span><img alt="../../../_images/DbCreation.gif" src="../../../_images/DbCreation.gif" />
 <p class="caption"><span class="caption-text">Create new Data Block</span></p>
@@ -227,27 +213,27 @@
 </div>
 </div>
 <div class="section" id="pou-program-organization-unit">
-<h2>2.2. POU: Program Organization Unit<a class="headerlink" href="#pou-program-organization-unit" title="Permalink to this headline">¶</a></h2>
+<h2>2.2.2. POU: Program Organization Unit<a class="headerlink" href="#pou-program-organization-unit" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="organization-block">
-<h3>2.2.1. Organization Block<a class="headerlink" href="#organization-block" title="Permalink to this headline">¶</a></h3>
+<h3>2.2.2.1. Organization Block<a class="headerlink" href="#organization-block" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center" id="id7" style="width: 600px">
 <span id="figobs"></span><img alt="../../../_images/OBs.gif" src="../../../_images/OBs.gif" />
 <p class="caption"><span class="caption-text">Organization Blocks</span></p>
 </div>
 </div>
 <div class="section" id="function">
-<h3>2.2.2. Function<a class="headerlink" href="#function" title="Permalink to this headline">¶</a></h3>
+<h3>2.2.2.2. Function<a class="headerlink" href="#function" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center" id="id8" style="width: 600px">
 <span id="figfunc"></span><img alt="../../../_images/function.gif" src="../../../_images/function.gif" />
 <p class="caption"><span class="caption-text">Create and use a function as code organization</span></p>
 </div>
 </div>
 <div class="section" id="function-block">
-<h3>2.2.3. Function Block<a class="headerlink" href="#function-block" title="Permalink to this headline">¶</a></h3>
+<h3>2.2.2.3. Function Block<a class="headerlink" href="#function-block" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 <div class="section" id="plc-programming-languages">
-<h2>2.3. PLC programming languages<a class="headerlink" href="#plc-programming-languages" title="Permalink to this headline">¶</a></h2>
+<h2>2.2.3. PLC programming languages<a class="headerlink" href="#plc-programming-languages" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt>The standard IEC 61131-3 define 5 programming languages for PLC:</dt>
 <dd><ul class="first last simple">
@@ -273,10 +259,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="programming.html" class="btn btn-neutral float-right" title="3. Programming" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="programming.html" class="btn btn-neutral float-right" title="2.3. Programming" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="s7-PLC.html" class="btn btn-neutral" title="1. Siemens PLC first steps" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="s7-PLC.html" class="btn btn-neutral" title="2.1. Siemens PLC first steps" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -307,7 +293,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../../',
-            VERSION:'0.8.0',
+            VERSION:'0.9.0',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

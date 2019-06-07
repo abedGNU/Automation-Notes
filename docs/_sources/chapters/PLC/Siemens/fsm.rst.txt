@@ -154,19 +154,19 @@ A complete code snippet is shown here:
               #oPrevState := #oActState;
               #oActState := #sOPENING;
           END_IF;
-      sOPENING:
+      #sOPENING:
           #oCmdOpen:=TRUE;
           #oCmdClose := FALSE;
           IF #iOpened THEN
               #oPrevState := #oActState;
               #oActState := #sOPENED;
           END_IF;
-      sOPENED:
+      #sOPENED:
           IF #iReqClose THEN
               #oPrevState := #oActState;
               #oActState := #sCLOSING;
           END_IF;
-      sCLOSING:
+      #sCLOSING:
           #oCmdOpen:=FALSE;
           #oCmdClose := TRUE;
           IF #iClosed THEN

@@ -13,50 +13,16 @@ Automation notes!
 .. warning:: Work in progress
 
 .. toctree::
-   :caption: Basics
-   :maxdepth: 1
-   :numbered:
-
-   chapters/PLC/basics/basics
-   chapters/PLC/basics/programming
-   chapters/PLC/basics/c
-   chapters/PLC/basics/OS
-
-.. warning:: Work in progress
-
-.. toctree::
-  :caption: Siemens PLC
+  :caption: Automation notes
   :maxdepth: 1
   :numbered:
 
-  chapters/PLC/Siemens/s7-PLC
-  chapters/PLC/Siemens/concepts
-  chapters/PLC/Siemens/programming
-  chapters/PLC/Siemens/style-guide
-  chapters/PLC/Siemens/badcode
+  chapters/PLC/basics/index
 
-  chapters/PLC/Siemens/exercises
-  chapters/PLC/Siemens/solutions
+  chapters/PLC/Siemens/index
 
-  chapters/PLC/Siemens/fsm
-  chapters/PLC/Siemens/more-ex
-  chapters/PLC/Siemens/more-ex-solutions
+  chapters/PLC/CoDeSys/index
 
-  chapters/PLC/Siemens/library
-  chapters/PLC/Siemens/project
-
-  chapters/PLC/Siemens/completeprg
-
-
-
-.. warning:: Work in progress
-
-.. toctree::
-  :caption: CoDeSys
-  :maxdepth: 1
-  :numbered:
-
-  chapters/PLC/CoDeSys/iec61131-3
-  chapters/PLC/CoDeSys/codesys
+  chapters/PLC/s7-Library/index
 
 .. note:: **Knowledge is Power**

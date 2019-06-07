@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2. CoDeSys &mdash; Automation notes 0.8.0 documentation</title>
+  <title>3.2. CoDeSys &mdash; Automation notes 0.9.0 documentation</title>
   
 
   
@@ -28,7 +28,8 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="prev" title="1. IEC 61131-3" href="iec61131-3.html" /> 
+    <link rel="next" title="4. S7 Library" href="../s7-Library/index.html" />
+    <link rel="prev" title="3.1. IEC 61131-3" href="iec61131-3.html" /> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -57,7 +58,7 @@
             
             
               <div class="version">
-                0.8
+                0.9
               </div>
             
           
@@ -81,33 +82,16 @@
               
             
             
-              <p class="caption"><span class="caption-text">Basics</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../basics/basics.html">1. Basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basics/programming.html">2. Programming</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basics/c.html">3. C language</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basics/OS.html">4. Operating systems and firmwares</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Siemens PLC</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Siemens/s7-PLC.html">1. Siemens PLC first steps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Siemens/concepts.html">2. Fundamental concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Siemens/programming.html">3. Programming</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Siemens/style-guide.html">4. Style guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Siemens/badcode.html">5. Bad code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Siemens/exercises.html">6. Exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Siemens/solutions.html">7. Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Siemens/fsm.html">8. State machine</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Siemens/more-ex.html">9. More exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Siemens/more-ex-solutions.html">10. More exercises solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Siemens/library.html">11. Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Siemens/project.html">12. Simple project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Siemens/completeprg.html">13. Complete project</a></li>
-</ul>
-<p class="caption"><span class="caption-text">CoDeSys</span></p>
+              <p class="caption"><span class="caption-text">Automation notes</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="iec61131-3.html">1. IEC 61131-3</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. CoDeSys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/index.html">1. Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Siemens/index.html">2. Siemens PLC</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. CoDeSys</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="iec61131-3.html">3.1. IEC 61131-3</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.2. CoDeSys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../s7-Library/index.html">4. S7 Library</a></li>
 </ul>
 
             
@@ -153,7 +137,9 @@
     
       <li><a href="../../../index.html">Docs</a> &raquo;</li>
         
-      <li>2. CoDeSys</li>
+          <li><a href="index.html">3. CoDeSys</a> &raquo;</li>
+        
+      <li>3.2. CoDeSys</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -173,7 +159,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="codesys">
-<h1>2. CoDeSys<a class="headerlink" href="#codesys" title="Permalink to this headline">¶</a></h1>
+<h1>3.2. CoDeSys<a class="headerlink" href="#codesys" title="Permalink to this headline">¶</a></h1>
 </div>
 
 
@@ -184,8 +170,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../s7-Library/index.html" class="btn btn-neutral float-right" title="4. S7 Library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="iec61131-3.html" class="btn btn-neutral" title="1. IEC 61131-3" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="iec61131-3.html" class="btn btn-neutral" title="3.1. IEC 61131-3" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -216,7 +204,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../../',
-            VERSION:'0.8.0',
+            VERSION:'0.9.0',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3. Programming &mdash; Automation notes 0.8.0 documentation</title>
+  <title>2.3. Programming &mdash; Automation notes 0.9.0 documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="4. Style guide" href="style-guide.html" />
-    <link rel="prev" title="2. Fundamental concepts" href="concepts.html" /> 
+    <link rel="next" title="2.4. Style guide" href="style-guide.html" />
+    <link rel="prev" title="2.2. Fundamental concepts" href="concepts.html" /> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                0.8
+                0.9
               </div>
             
           
@@ -82,48 +82,31 @@
               
             
             
-              <p class="caption"><span class="caption-text">Basics</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../basics/basics.html">1. Basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basics/programming.html">2. Programming</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basics/c.html">3. C language</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basics/OS.html">4. Operating systems and firmwares</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Siemens PLC</span></p>
+              <p class="caption"><span class="caption-text">Automation notes</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="s7-PLC.html">1. Siemens PLC first steps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="concepts.html">2. Fundamental concepts</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Programming</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#basic-operations">3.1. Basic operations</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#coils">3.1.1. Coils</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#trigger">3.1.2. Trigger</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#timers">3.1.3. Timers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#set-reset">3.1.4. Set Reset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/index.html">1. Basics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">2. Siemens PLC</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="s7-PLC.html">2.1. Siemens PLC first steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts.html">2.2. Fundamental concepts</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.3. Programming</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#basic-operations">2.3.1. Basic operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scl">2.3.2. SCL</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#scl">3.2. SCL</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#if-statement">3.2.1. If statement</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#case-statement">3.2.2. Case statement</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#loop">3.2.3. Loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="style-guide.html">2.4. Style guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="badcode.html">2.5. Bad code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises.html">2.6. Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises-solutions.html">2.7. Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsm.html">2.8. State machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="more-ex.html">2.9. More exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="more-ex-solutions.html">2.10. More exercises solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library.html">2.11. Create a library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project.html">2.12. Simple project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="completeprg.html">2.13. Complete project</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="style-guide.html">4. Style guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="badcode.html">5. Bad code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercises.html">6. Exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solutions.html">7. Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fsm.html">8. State machine</a></li>
-<li class="toctree-l1"><a class="reference internal" href="more-ex.html">9. More exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="more-ex-solutions.html">10. More exercises solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="library.html">11. Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="project.html">12. Simple project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="completeprg.html">13. Complete project</a></li>
-</ul>
-<p class="caption"><span class="caption-text">CoDeSys</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/iec61131-3.html">1. IEC 61131-3</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/codesys.html">2. CoDeSys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/index.html">3. CoDeSys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../s7-Library/index.html">4. S7 Library</a></li>
 </ul>
 
             
@@ -169,7 +152,9 @@
     
       <li><a href="../../../index.html">Docs</a> &raquo;</li>
         
-      <li>3. Programming</li>
+          <li><a href="index.html">2. Siemens PLC</a> &raquo;</li>
+        
+      <li>2.3. Programming</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -189,12 +174,12 @@
            <div itemprop="articleBody">
             
   <div class="section" id="programming">
-<h1>3. Programming<a class="headerlink" href="#programming" title="Permalink to this headline">¶</a></h1>
+<h1>2.3. Programming<a class="headerlink" href="#programming" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference download internal" download="" href="../../../_downloads/f5ae24b546423b39222bbe933aea3148/Exercises.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">project</span> <span class="pre">Exercises.zip</span></code></a></p>
 <div class="section" id="basic-operations">
-<h2>3.1. Basic operations<a class="headerlink" href="#basic-operations" title="Permalink to this headline">¶</a></h2>
+<h2>2.3.1. Basic operations<a class="headerlink" href="#basic-operations" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="coils">
-<h3>3.1.1. Coils<a class="headerlink" href="#coils" title="Permalink to this headline">¶</a></h3>
+<h3>2.3.1.1. Coils<a class="headerlink" href="#coils" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center" style="width: 600px">
 <img alt="../../../_images/mainLogic.png" src="../../../_images/mainLogic.png" />
 </div>
@@ -204,7 +189,7 @@
 </div>
 </div>
 <div class="section" id="trigger">
-<h3>3.1.2. Trigger<a class="headerlink" href="#trigger" title="Permalink to this headline">¶</a></h3>
+<h3>2.3.1.2. Trigger<a class="headerlink" href="#trigger" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center" style="width: 200px">
 <img alt="../../../_images/r_trig.jpg" src="../../../_images/r_trig.jpg" />
 </div>
@@ -221,7 +206,7 @@
 </div>
 </div>
 <div class="section" id="timers">
-<h3>3.1.3. Timers<a class="headerlink" href="#timers" title="Permalink to this headline">¶</a></h3>
+<h3>2.3.1.3. Timers<a class="headerlink" href="#timers" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center" style="width: 400px">
 <img alt="../../../_images/ton.png" src="../../../_images/ton.png" />
 </div>
@@ -242,7 +227,7 @@
 </div>
 </div>
 <div class="section" id="set-reset">
-<h3>3.1.4. Set Reset<a class="headerlink" href="#set-reset" title="Permalink to this headline">¶</a></h3>
+<h3>2.3.1.4. Set Reset<a class="headerlink" href="#set-reset" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center" id="id7" style="width: 600px">
 <img alt="../../../_images/set_reset.gif" src="../../../_images/set_reset.gif" />
 <p class="caption"><span class="caption-text">Set Reset a signal</span></p>
@@ -258,9 +243,9 @@
 </div>
 </div>
 <div class="section" id="scl">
-<h2>3.2. SCL<a class="headerlink" href="#scl" title="Permalink to this headline">¶</a></h2>
+<h2>2.3.2. SCL<a class="headerlink" href="#scl" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="if-statement">
-<h3>3.2.1. If statement<a class="headerlink" href="#if-statement" title="Permalink to this headline">¶</a></h3>
+<h3>2.3.2.1. If statement<a class="headerlink" href="#if-statement" title="Permalink to this headline">¶</a></h3>
 <p>Think about the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement as you think in daily life.
 For example:</p>
 <blockquote>
@@ -276,7 +261,7 @@ For example:</p>
 </div>
 </div>
 <div class="section" id="case-statement">
-<h3>3.2.2. Case statement<a class="headerlink" href="#case-statement" title="Permalink to this headline">¶</a></h3>
+<h3>2.3.2.2. Case statement<a class="headerlink" href="#case-statement" title="Permalink to this headline">¶</a></h3>
 <p>Case is like if, it check if the numerical value of the variable is present in the list, and execute the instruction corresponding to that value.
 For example let create a variable <code class="docutils literal notranslate"><span class="pre">day</span></code> of type <code class="docutils literal notranslate"><span class="pre">int</span></code>. The first day of the week is one the last day is seven.
 So If I want to make a decision tree, I list in the <code class="docutils literal notranslate"><span class="pre">case</span></code> statement days from 1 to 7, and for every value I do something:</p>
@@ -318,7 +303,7 @@ So If I want to make a decision tree, I list in the <code class="docutils litera
 </div>
 </div>
 <div class="section" id="loop">
-<h3>3.2.3. Loop<a class="headerlink" href="#loop" title="Permalink to this headline">¶</a></h3>
+<h3>2.3.2.3. Loop<a class="headerlink" href="#loop" title="Permalink to this headline">¶</a></h3>
 <p>Try to avoid <code class="docutils literal notranslate"><span class="pre">for</span></code> and <code class="docutils literal notranslate"><span class="pre">while</span></code> in PLC programming if you don’t know what are you doing. Infinite loops stop the plc.</p>
 </div>
 </div>
@@ -332,10 +317,10 @@ So If I want to make a decision tree, I list in the <code class="docutils litera
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="style-guide.html" class="btn btn-neutral float-right" title="4. Style guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="style-guide.html" class="btn btn-neutral float-right" title="2.4. Style guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="concepts.html" class="btn btn-neutral" title="2. Fundamental concepts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="concepts.html" class="btn btn-neutral" title="2.2. Fundamental concepts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -366,7 +351,7 @@ So If I want to make a decision tree, I list in the <code class="docutils litera
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../../',
-            VERSION:'0.8.0',
+            VERSION:'0.9.0',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

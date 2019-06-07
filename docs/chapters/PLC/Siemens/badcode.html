@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5. Bad code &mdash; Automation notes 0.8.0 documentation</title>
+  <title>2.5. Bad code &mdash; Automation notes 0.9.0 documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="6. Exercises" href="exercises.html" />
-    <link rel="prev" title="4. Style guide" href="style-guide.html" /> 
+    <link rel="next" title="2.6. Exercises" href="exercises.html" />
+    <link rel="prev" title="2.4. Style guide" href="style-guide.html" /> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                0.8
+                0.9
               </div>
             
           
@@ -82,38 +82,32 @@
               
             
             
-              <p class="caption"><span class="caption-text">Basics</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../basics/basics.html">1. Basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basics/programming.html">2. Programming</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basics/c.html">3. C language</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basics/OS.html">4. Operating systems and firmwares</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Siemens PLC</span></p>
+              <p class="caption"><span class="caption-text">Automation notes</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="s7-PLC.html">1. Siemens PLC first steps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="concepts.html">2. Fundamental concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="programming.html">3. Programming</a></li>
-<li class="toctree-l1"><a class="reference internal" href="style-guide.html">4. Style guide</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Bad code</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#naming">5.1. Naming</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#code-reuse">5.2. Code reuse</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#general">5.3. General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/index.html">1. Basics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">2. Siemens PLC</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="s7-PLC.html">2.1. Siemens PLC first steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts.html">2.2. Fundamental concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programming.html">2.3. Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="style-guide.html">2.4. Style guide</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.5. Bad code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#naming">2.5.1. Naming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-reuse">2.5.2. Code reuse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#general">2.5.3. General</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="exercises.html">6. Exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solutions.html">7. Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fsm.html">8. State machine</a></li>
-<li class="toctree-l1"><a class="reference internal" href="more-ex.html">9. More exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="more-ex-solutions.html">10. More exercises solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="library.html">11. Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="project.html">12. Simple project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="completeprg.html">13. Complete project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises.html">2.6. Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises-solutions.html">2.7. Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsm.html">2.8. State machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="more-ex.html">2.9. More exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="more-ex-solutions.html">2.10. More exercises solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library.html">2.11. Create a library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project.html">2.12. Simple project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="completeprg.html">2.13. Complete project</a></li>
 </ul>
-<p class="caption"><span class="caption-text">CoDeSys</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/iec61131-3.html">1. IEC 61131-3</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/codesys.html">2. CoDeSys</a></li>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/index.html">3. CoDeSys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../s7-Library/index.html">4. S7 Library</a></li>
 </ul>
 
             
@@ -159,7 +153,9 @@
     
       <li><a href="../../../index.html">Docs</a> &raquo;</li>
         
-      <li>5. Bad code</li>
+          <li><a href="index.html">2. Siemens PLC</a> &raquo;</li>
+        
+      <li>2.5. Bad code</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -179,7 +175,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="bad-code">
-<h1>5. Bad code<a class="headerlink" href="#bad-code" title="Permalink to this headline">¶</a></h1>
+<h1>2.5. Bad code<a class="headerlink" href="#bad-code" title="Permalink to this headline">¶</a></h1>
 <p>PLC programs usually are not structured well, neither follow best practice in software engineering.
 I notice that more than 95% of PLC programs are written in a horrible way, those are called bad code.</p>
 <p>More experience a traditional PLC programmers have, more bad code he write. Reasons can vary from the leak of academic formation to other reasons.
@@ -194,7 +190,7 @@ It support enumerations, classes, inheritances. Languages are variable name base
 <p>Tia portal become variable based, compared to the old Step 7. But Siemens keep function and data block numbers for an unknown reason.
 The reason can’t be retro compatibility, if you open a project in Tia Portal 15, you can anymore open it in TIA portal 14.</p>
 <div class="section" id="naming">
-<h2>5.1. Naming<a class="headerlink" href="#naming" title="Permalink to this headline">¶</a></h2>
+<h2>2.5.1. Naming<a class="headerlink" href="#naming" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center" id="id1" style="width: 400px">
 <img alt="../../../_images/bad_name_struct.png" src="../../../_images/bad_name_struct.png" />
 <p class="caption"><span class="caption-text">Groups and functions without a good name</span></p>
@@ -225,7 +221,7 @@ The reason can’t be retro compatibility, if you open a project in Tia Portal 1
 </div>
 </div>
 <div class="section" id="code-reuse">
-<h2>5.2. Code reuse<a class="headerlink" href="#code-reuse" title="Permalink to this headline">¶</a></h2>
+<h2>2.5.2. Code reuse<a class="headerlink" href="#code-reuse" title="Permalink to this headline">¶</a></h2>
 <p>A project have three cells, every cell have two rotating tables. The following snippet shown two function blocks without local variables for two tables in the same cell.</p>
 <div class="figure align-center" id="id8" style="width: 400px">
 <img alt="../../../_images/table_1.png" src="../../../_images/table_1.png" />
@@ -255,7 +251,7 @@ In this project we can see also some difference in the program, even if the two 
 </div>
 </div>
 <div class="section" id="general">
-<h2>5.3. General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<h2>2.5.3. General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
 <p>In the following picture, a variable was assigned to other different variables, in different functions, before arriving to the output.
 During debugging is difficult to find any bug. Anyway this have no meaning.</p>
 <div class="figure align-center" style="width: 400px">
@@ -281,10 +277,10 @@ When dealing with assignments, it is better to use ST language than Ladder.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="exercises.html" class="btn btn-neutral float-right" title="6. Exercises" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="exercises.html" class="btn btn-neutral float-right" title="2.6. Exercises" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="style-guide.html" class="btn btn-neutral" title="4. Style guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="style-guide.html" class="btn btn-neutral" title="2.4. Style guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -315,7 +311,7 @@ When dealing with assignments, it is better to use ST language than Ladder.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../../',
-            VERSION:'0.8.0',
+            VERSION:'0.9.0',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
