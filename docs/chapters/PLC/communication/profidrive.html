@@ -1,0 +1,263 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>PROFIdrive &mdash; Automation notes 0.9.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Automation notes
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Automation notes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basics/index.html">1. Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Siemens/index.html">2. Siemens PLC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/index.html">3. CoDeSys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../s7-Library/index.html">4. S7 Library</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Automation notes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>PROFIdrive</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/chapters/PLC/communication/profidrive.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="profidrive">
+<h1>PROFIdrive<a class="headerlink" href="#profidrive" title="Permalink to this headline">¶</a></h1>
+<p>Which terminology do you use for cyclic PROFIdrive communication?</p>
+<blockquote>
+<div>Entry
+Associated product(s)</div></blockquote>
+<p>What is PROFIdrive:
+PROFIdrive is a device profile developed by drive manufacturers to provide manufacturer-neutral standardization of the PROFIBUS interface of drives and thus minimize integration and commissioning time and effort. The FAQ describes the terminology of the common data objects of cyclic communication between controller and drive.</p>
+<p>Cyclic data transmission messages
+Cyclic data transmission messages have the following basic structure.</p>
+<p>Fig. 1</p>
+<p>The core consists of user data (PPO)</p>
+<p>Parameter process data object (PPO)
+The structure of the user data for the cyclic channel is defined in the PROFIdrive Profile version V2.0 and designated as Parameter Process data Object (PPO). Using the PPO the master (controller) accesses the slaves (drives) cyclically. The PPO is divided into two areas: PKW area and PZD area. The dividing into the two areas achieves decoupling in time. The PKW area is usually processed slower than the PZD area.</p>
+<p>Fig. 2</p>
+<p>PKW area
+With the parameter ID value (Parameter-Kennung-Wert (PKW)) you can monitor and/or change any parameter in the converter. For example, you can read out faults or minimum/maximum limits. The PKW area consists of at least for words, the parameter ID (Parameterkennung (PKE)), the parameter index (IND) and the parameter value (Parameterwert (PWE)) that occupies two words. There are also PPO types that do not have a PKW area.</p>
+<p>Fig. 3</p>
+<p>Parameter
+attributes      Explanation
+PKE</p>
+<p>The parameter ID is always a 16-bit value and consists of the task or reply ID (Auftrags- bzw. Antwortkennung (AK)), a toggle bit for spontaneous messages (SPM) and the parameternumber (PNU). It has the following structure.</p>
+<p>Fig. 4</p>
+<blockquote>
+<div><p>AK
+The task/reply ID comprises bits 12 to 15. In the task message (Master → Converter) AK is a task ID and a reply ID in a reply message (Converter → Master). In the PROFIdrive Profile version V2.0 the task IDs 0 to 9 are defined (e.g. 0 = no task, 1 = request parameter value, 2 = change parameter value [word] etc.). More converter-specific task IDs are possible.
+Refer to the relevant manual to see which task/reply ID your drive supports.</p>
+<p>SPM
+Bit 11 serves as a toggle bit for spontaneous messages for transmitting active parameters.</p>
+<p>PNU
+Bits 0 to 10 contain the number of the desired converter parameter.</p>
+</div></blockquote>
+<p>IND</p>
+<p>In cyclic communication the parameter index contains the subindex (also array subindex) in the higher value byte. The lower value byte is not defined in PROFIdrive Profile version V2.0 and can be assigned according to the converter used.</p>
+<p>Fig. 5</p>
+<p>When editing parameters, the subindex transmits the required index of an indexed parameter. When editing a description element (AK = 4), the number of the desired element is transmitted.
+PWE</p>
+<p>The parameter value is always transmitted as a double-word. Only one parameter value can ever be transmitted in a PPO message.</p>
+<p>Fig. 6</p>
+<p>A 32-bit parameter value consists of PWE1 (high value word, 3rd word) and PWE2 (low value word, 4th word). A 16-bit parameter value is transmitted in PWE2. In this case you must set PWE1 to 0 in the PROFIBUS-DP master.</p>
+<p>PZD area
+In the process data area (Prozessdatenbereich (PZD)) both control words and setpoint values (Master → Converter), and also status words and actual values (Converter → Master) are transferred. Unlike parameter transfer in the PKW area, in which the parameters to be transferred are defined in the message, the process variables to be transferred in the PZD area are defined by the PPO type or the converter. Likewise, the amount of process data depends on the PPO type or converter.</p>
+<p>Fig. 7</p>
+<p>Some mandatory PZDs have a predefined names:</p>
+<p>STW:    (Steuerwort) Control word 1 (usually on PZD 1)
+HSW:    (Hauptsollwert) Main setpoint (usually on PZD 2)
+ZSW:    (Zustandswort) Status word 1 (usually on PZD 1)
+HIW:    (Hauptistwert) Main actual value (usually on PZD 2)</p>
+<p>After PROFIdrive Profile version V2.0 there are five PKW areas predefined, which differ with regard to the presence of the PKW area or the length of the PZD area.</p>
+<p>Fig. 8</p>
+<p>In PROFIdrive Profile version V3.0 you can also freely configure the cyclic data in addition to the predefined PPO types. For example, you can configure four PZD words in MICROMASTER 420 and eight in MICROMASTER 440/430. A PKW area can be configured regardless of the amount of process data.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : Creative Commons License 2019, Abed.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.9.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

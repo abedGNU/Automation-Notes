@@ -4,6 +4,8 @@ Automation Notes
 
 https://abedgnu.github.io/Automation-Notes/
 
+https://automation-notes.readthedocs.io/
+
 PLC
 ----
 Siemens S7-1200 and S7-1500

@@ -120,6 +120,9 @@ In this example we use the tag or variable ``Clock_1Hz`` in order to turn on and
 
 :download:`Download S7-1200 project <../../../code/Exercises/Siemens/Ex01/Ex01.zip>`
 
+S7-PLCSIM
+=============
+
 Exercise S7-1500 HW configuration
 ===================================
 

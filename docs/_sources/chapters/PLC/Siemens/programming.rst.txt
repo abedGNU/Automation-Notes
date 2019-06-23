@@ -7,12 +7,12 @@ Programming
 Basic operations
 ===================
 
-Coils
-------
-
 .. figure:: images/mainLogic.png
     :align: center
     :figwidth: 600px
+
+Coils
+------
 
 .. figure:: images/contact.gif
     :align: center

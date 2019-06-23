@@ -42,25 +42,6 @@ Remember the duty cycle is the time (or percentage) of the time when the signal 
 
     Preset times tHigh (on) and tLow (off) can be set as desired
 
-Control 3 motors sequencing (1)
-===============================
-
-Write a program that will switch on two motors when the start switch is operated,
-then switch off one motor after 200 s and the other motor after a further 100 s. When
-both motors have been switched off, a third motor is to be switched on for 50 s. The cycle
-is then to repeat itself unless a stop switch has been activated.
-
-
-Control 3 motors sequencing (2)
-===============================
-
-Write a ladder program to switch on a motor when the start switch is momentarily
-activated, with the motor remaining on for 50 s. At the end of that time a second
-motor is to be switched on for a further 50 s. A third motor is to be switched on 10 s
-before the second motor switches off and is to remain on for 50 s. The cycle is then
-to repeat itself unless a stop switch has been activated.
-
-
 Bi-stable cylinder
 =====================
 

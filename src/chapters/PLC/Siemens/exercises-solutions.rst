@@ -63,13 +63,6 @@ Blink
 
 .. literalinclude:: ../../../code/Exercises/Siemens/Exercises/scl/Blink.scl
 
-Control 3 motors sequencing (1)
-===============================
-
-Control 3 motors sequencing (2)
-===============================
-
-
 Bi-stable cylinder
 =====================
 A simple and functional solution in ladder is presented. A complete solution can be found in the library, and a state machine implementation can be found in the ``state machine`` chapter.

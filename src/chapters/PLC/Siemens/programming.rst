@@ -7,18 +7,18 @@ Programming
 Basic operations
 ===================
 
-Coils
-------
-
 .. figure:: images/mainLogic.png
     :align: center
     :figwidth: 600px
+
+Contact and Coils
+-------------------
 
 .. figure:: images/contact.gif
     :align: center
     :figwidth: 600px
 
-    Coil in ladder and its equivalent in scl
+    Contact-Coil in ladder and its equivalent in SCL
 
 Trigger
 -----------

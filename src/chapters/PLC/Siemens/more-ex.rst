@@ -5,33 +5,12 @@ More exercises
 State machine version of alternative motion
 =============================================
 
-Valve sequencing
-====================
-
-We have 2 pistons (cylinders) A and B. When piston A receive a command to open, when it is fully opened, piston B will open.
-After 3 seconds piston A will close. When piston A is closed, piston B will close.
-
-Drill
-======
-
-.. figure:: images/drill.png
-    :align: center
-    :figwidth: 600px
-
-
-Vending machine
-=================
-
-Draw the state machine diagram of a vending machine, then write the program in SCL.
-
 Access coordination
 ====================
 
 Write a program that control and manager the access of two robots to the same working station.
 Robot L put a part on the table (Load), Robot U take away the part from the table (UNload).
 On the table there is a sensor that check the presence of the part. The sensor is normally closed (No part or free=1, part present =0).
-
-
 
 Unloading conveyor
 ===================
