@@ -82,7 +82,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Automation notes</span></p>
+              <p class="caption"><span class="caption-text">PLC programming</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">1. Basics</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="basics.html">1.1. Basics</a></li>
@@ -96,7 +96,6 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Siemens/index.html">2. Siemens PLC</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../CoDeSys/index.html">3. CoDeSys</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../s7-Library/index.html">4. S7 Library</a></li>
 </ul>
 
             
@@ -173,10 +172,10 @@
 <span id="figcshelltest"></span><img alt="../../../_images/cshellTest.gif" src="../../../_images/cshellTest.gif" />
 <p class="caption"><span class="caption-text">C++ online shell</span></p>
 </div>
-<p>The following code is the main function, the entry point of any C program. For now we are interested in the <code class="docutils literal notranslate"><span class="pre">main</span></code> function.</p>
+<p>The following code is the main function, the entry point of any C program. For now we are interested in the <code class="docutils literal"><span class="pre">main</span></code> function.</p>
 <div class="literal-block-wrapper docutils container" id="lstc">
 <div class="code-block-caption"><span class="caption-text">C program</span><a class="headerlink" href="#lstc" title="Permalink to this code">¶</a></div>
-<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<div class="highlight-C"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
@@ -208,7 +207,7 @@
 <p>In C and other languages (not all), we must declare a variable before using it.</p>
 <div class="literal-block-wrapper docutils container" id="lstsum">
 <div class="code-block-caption"><span class="caption-text">C program</span><a class="headerlink" href="#lstsum" title="Permalink to this code">¶</a></div>
-<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<div class="highlight-C"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
     <span class="kt">int</span> <span class="n">a</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
@@ -248,7 +247,7 @@
 <blockquote>
 <div><div class="literal-block-wrapper docutils container" id="lstif">
 <div class="code-block-caption"><span class="caption-text">If statement</span><a class="headerlink" href="#lstif" title="Permalink to this code">¶</a></div>
-<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<div class="highlight-C"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
     <span class="kt">int</span> <span class="n">a</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
@@ -273,10 +272,10 @@
 </div>
 </div>
 </div></blockquote>
-<p>An equivalent to <code class="docutils literal notranslate"><span class="pre">if</span></code> is the <code class="docutils literal notranslate"><span class="pre">switch</span></code>.</p>
+<p>An equivalent to <code class="docutils literal"><span class="pre">if</span></code> is the <code class="docutils literal"><span class="pre">switch</span></code>.</p>
 <div class="literal-block-wrapper docutils container" id="lstswitch">
 <div class="code-block-caption"><span class="caption-text">Switch statement</span><a class="headerlink" href="#lstswitch" title="Permalink to this code">¶</a></div>
-<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<div class="highlight-C"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
     <span class="kt">int</span> <span class="n">a</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
@@ -300,10 +299,10 @@
 </div>
 <div class="section" id="functions">
 <h3>1.3.1.3. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
-<p>Functions are useful to group instructions that can be used more than one time and to make the program more readable. In the follwing example, a function called <code class="docutils literal notranslate"><span class="pre">max</span></code> is created.</p>
+<p>Functions are useful to group instructions that can be used more than one time and to make the program more readable. In the follwing example, a function called <code class="docutils literal"><span class="pre">max</span></code> is created.</p>
 <div class="literal-block-wrapper docutils container" id="lstfunc">
 <div class="code-block-caption"><span class="caption-text">Fucntion</span><a class="headerlink" href="#lstfunc" title="Permalink to this code">¶</a></div>
-<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<div class="highlight-C"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">max</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
 <span class="p">{</span>

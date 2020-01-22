@@ -1,0 +1,256 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.1. Basics &mdash; Automation notes 0.9.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="1.2. Programming" href="programming.html" />
+    <link rel="prev" title="1. Basics" href="index.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Automation notes
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">PLC programming</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">1. Basics</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.1. Basics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sensors-and-actuators">1.1.1. Sensors and actuators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#programmable-logic-controller-plc">1.1.2. Programmable logic controller: PLC</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="programming.html">1.2. Programming</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../PLC/CoDeSys/index.html">2. CoDeSys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PLC/Siemens/index.html">3. Siemens PLC</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Automation notes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">1. Basics</a> &raquo;</li>
+        
+      <li>1.1. Basics</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/chapters/Basics/basics.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="basics">
+<h1>1.1. Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h1>
+<dl class="docutils">
+<dt>In any automatic industrial line the following are present:</dt>
+<dd><ul class="first last simple">
+<li>Sensors</li>
+<li>Actuators</li>
+<li>Controller</li>
+<li>SCADA</li>
+</ul>
+</dd>
+</dl>
+<p>Other components maybe are available, but the first 3 components are the heart of automation.</p>
+<p>This system can be compared to human beings. Usually a human have one actuator, one controller and five senosrs (actually the human being sensors are more than 5).
+This system acquire information from outside via sensors (eye, nose, skin, ears, tongue,…). The brain, controller, elaborate these information and send commands to muscles (actuators).</p>
+<div class="section" id="sensors-and-actuators">
+<h2>1.1.1. Sensors and actuators<a class="headerlink" href="#sensors-and-actuators" title="Permalink to this headline">¶</a></h2>
+<p>Industrial Sensors are those devices that acquire information from the field. Typically the signals are digital (e.g. switch, proximity sensor) or analog (e.g. height sensors, pressure gauge). Also a camera (vision system) can be classified as a sensor.</p>
+<p>Actuators are mainly driven by electric, pneumatic and oleo-dynamic power. These actuators are mainly motors and valves.</p>
+</div>
+<div class="section" id="programmable-logic-controller-plc">
+<h2>1.1.2. Programmable logic controller: PLC<a class="headerlink" href="#programmable-logic-controller-plc" title="Permalink to this headline">¶</a></h2>
+<p>In this era, hard wiring is not any more necessary. Sensors and actuators can be interfaced to a controller, via cables, fieldbuses or any other communication protocol. PLC and microcontroller based solutions are the main controllers in industrial fields. PLC are programmed Usually in Ladder or in ST. Microcontrollers are programmed in C language. At the heart of a PLC, ther is a microcontroller, where is present a firmware to facilitate to programming.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="programming.html" class="btn btn-neutral float-right" title="1.2. Programming" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="1. Basics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : Creative Commons License 2019, Abed.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.9.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -8,5 +8,3 @@ Basics
 
   basics
   programming
-  c
-  OS

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.8. State machine &mdash; Automation notes 0.9.0 documentation</title>
+  <title>3.8. State machine &mdash; Automation notes 0.9.0 documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="2.9. More exercises" href="more-ex.html" />
-    <link rel="prev" title="2.7. Solutions" href="exercises-solutions.html" /> 
+    <link rel="next" title="3.9. More exercises" href="more-ex.html" />
+    <link rel="prev" title="3.7. Solutions" href="exercises-solutions.html" /> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -82,31 +82,30 @@
               
             
             
-              <p class="caption"><span class="caption-text">Automation notes</span></p>
+              <p class="caption"><span class="caption-text">PLC programming</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../basics/index.html">1. Basics</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">2. Siemens PLC</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="s7-PLC.html">2.1. Siemens PLC first steps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="concepts.html">2.2. Fundamental concepts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="programming.html">2.3. Programming</a></li>
-<li class="toctree-l2"><a class="reference internal" href="style-guide.html">2.4. Style guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="badcode.html">2.5. Bad code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exercises.html">2.6. Exercises</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exercises-solutions.html">2.7. Solutions</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">2.8. State machine</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#concepts">2.8.1. Concepts</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#implementation">2.8.2. Implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Basics/index.html">1. Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/index.html">2. CoDeSys</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. Siemens PLC</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="s7-PLC.html">3.1. Siemens PLC first steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts.html">3.2. Fundamental concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programming.html">3.3. Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="style-guide.html">3.4. Style guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="badcode.html">3.5. Bad code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises.html">3.6. Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises-solutions.html">3.7. Solutions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.8. State machine</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#concepts">3.8.1. Concepts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#implementation">3.8.2. Implementation</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="more-ex.html">2.9. More exercises</a></li>
-<li class="toctree-l2"><a class="reference internal" href="more-ex-solutions.html">2.10. More exercises solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="library.html">2.11. Create a library</a></li>
-<li class="toctree-l2"><a class="reference internal" href="project.html">2.12. Simple project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="completeprg.html">2.13. Complete project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="more-ex.html">3.9. More exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="more-ex-solutions.html">3.10. More exercises solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library.html">3.11. Create a library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project.html">3.12. Simple project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="completeprg.html">3.13. Complete project</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/index.html">3. CoDeSys</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../s7-Library/index.html">4. S7 Library</a></li>
 </ul>
 
             
@@ -152,9 +151,9 @@
     
       <li><a href="../../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">2. Siemens PLC</a> &raquo;</li>
+          <li><a href="index.html">3. Siemens PLC</a> &raquo;</li>
         
-      <li>2.8. State machine</li>
+      <li>3.8. State machine</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -174,19 +173,19 @@
            <div itemprop="articleBody">
             
   <div class="section" id="state-machine">
-<h1>2.8. State machine<a class="headerlink" href="#state-machine" title="Permalink to this headline">¶</a></h1>
+<h1>3.8. State machine<a class="headerlink" href="#state-machine" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">State machine diagram are drawing in <a class="reference external" href="https://www.yworks.com/products/yed/download">yEd</a> Graph editor from <a class="reference external" href="https://www.yworks.com/">yWorks</a>.</p>
 </div>
-<p><a class="reference download internal" download="" href="../../../_downloads/f5ae24b546423b39222bbe933aea3148/Exercises.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Exercises</span> <span class="pre">solutions</span></code></a></p>
+<p><a class="reference download internal" href="../../../_downloads/Exercises.zip" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Exercises</span> <span class="pre">solutions</span></code></a></p>
 <div class="section" id="concepts">
-<h2>2.8.1. Concepts<a class="headerlink" href="#concepts" title="Permalink to this headline">¶</a></h2>
+<h2>3.8.1. Concepts<a class="headerlink" href="#concepts" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt>A state machine have 2 componets:</dt>
 <dd><ul class="first last simple">
-<li><code class="docutils literal notranslate"><span class="pre">State</span></code> represented as a circle.</li>
-<li><code class="docutils literal notranslate"><span class="pre">Transition</span></code> represented as an arrow. The transition is the condition to change state.</li>
+<li><code class="docutils literal"><span class="pre">State</span></code> represented as a circle.</li>
+<li><code class="docutils literal"><span class="pre">Transition</span></code> represented as an arrow. The transition is the condition to change state.</li>
 </ul>
 </dd>
 </dl>
@@ -205,15 +204,15 @@ The cylinder may also be in a middle position, in our case we consider it as unk
 <div class="figure align-center" style="width: 400px">
 <img alt="../../../_images/statediag.jpg" src="../../../_images/statediag.jpg" />
 </div>
-<p>The diagram show the states and transition from one state to another. As we can see, the cylinder can’t go from <code class="docutils literal notranslate"><span class="pre">closed</span></code> to <code class="docutils literal notranslate"><span class="pre">opened</span></code> directly.
-To the <code class="docutils literal notranslate"><span class="pre">alarm</span></code> state we can arrive from any state.</p>
+<p>The diagram show the states and transition from one state to another. As we can see, the cylinder can’t go from <code class="docutils literal"><span class="pre">closed</span></code> to <code class="docutils literal"><span class="pre">opened</span></code> directly.
+To the <code class="docutils literal"><span class="pre">alarm</span></code> state we can arrive from any state.</p>
 <p>We can make a transition from opening to closing directly. Suppose I was opening, but before to open completely I change idea, and want o close.
 But usually this is not the case when dealing, for example with a gripper that need to hold or leave an object.
 Anyway, depending on the application, transitions from one state to another can be considered or not.</p>
 </div>
 <div class="section" id="implementation">
-<h2>2.8.2. Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h2>
-<p>Siemens doesn’t implement the <code class="docutils literal notranslate"><span class="pre">enumeration</span></code> data type.
+<h2>3.8.2. Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h2>
+<p>Siemens doesn’t implement the <code class="docutils literal"><span class="pre">enumeration</span></code> data type.
 For better readability we emulate the enumeration data types by creating CONSTANTS with the name of the state.</p>
 <div class="figure align-center" id="id3" style="width: 600px">
 <img alt="../../../_images/cylinder_var.png" src="../../../_images/cylinder_var.png" />
@@ -232,22 +231,22 @@ This interface is valid for implementation in SCL and in Ladder.</span></p>
 <p>Both implementations are valid and work. But one is more clear than the other, especially during debugging.</p>
 <p>Every state should have a unique number. In the implementation the CONSTANTS variable will be used instead of its numeric value. Technically we don’t care about the numeric value. It is enough that it is unique.</p>
 <div class="section" id="implementation-in-st">
-<h3>2.8.2.1. Implementation in ST<a class="headerlink" href="#implementation-in-st" title="Permalink to this headline">¶</a></h3>
+<h3>3.8.2.1. Implementation in ST<a class="headerlink" href="#implementation-in-st" title="Permalink to this headline">¶</a></h3>
 <p>A code snippet is shown in this section, a complete and tested solution will be in the Library documentation.
 Note anyway that this version of code is already functional.</p>
-<p>State machine can be implemented using and if statement. But a <code class="docutils literal notranslate"><span class="pre">Switch-Case</span></code> statement is more suitable and more readable than an if statement.</p>
-<p>For example when the cylinder is closed, it is in the closed state. So the variable <code class="docutils literal notranslate"><span class="pre">oActState</span></code> have the numeric value store in the constant <code class="docutils literal notranslate"><span class="pre">sCLOSED</span></code>.
-Using a <code class="docutils literal notranslate"><span class="pre">CASE</span></code> statement we can assign the logic depending on that state.
-For example, if the cylinder is in <code class="docutils literal notranslate"><span class="pre">sCLOSED</span></code> and receive the signal to open, a transition to the opening <code class="docutils literal notranslate"><span class="pre">sOPENING</span></code> state should be done</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#sCLOSED:
+<p>State machine can be implemented using and if statement. But a <code class="docutils literal"><span class="pre">Switch-Case</span></code> statement is more suitable and more readable than an if statement.</p>
+<p>For example when the cylinder is closed, it is in the closed state. So the variable <code class="docutils literal"><span class="pre">oActState</span></code> have the numeric value store in the constant <code class="docutils literal"><span class="pre">sCLOSED</span></code>.
+Using a <code class="docutils literal"><span class="pre">CASE</span></code> statement we can assign the logic depending on that state.
+For example, if the cylinder is in <code class="docutils literal"><span class="pre">sCLOSED</span></code> and receive the signal to open, a transition to the opening <code class="docutils literal"><span class="pre">sOPENING</span></code> state should be done</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>#sCLOSED:
   IF #iReqOpen THEN
       #oPrevState := #oActState;
       #oActState := #sOPENING;
   END_IF;
 </pre></div>
 </div>
-<p>The previous code snippet change the value of <code class="docutils literal notranslate"><span class="pre">oActState</span></code> to <code class="docutils literal notranslate"><span class="pre">sOPENING</span></code> if the <code class="docutils literal notranslate"><span class="pre">iReqOpen</span></code> is true. So now the cylinder is in the opening state, where the cylinder should begin to move, so a command to the valve should be send</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sOPENING:
+<p>The previous code snippet change the value of <code class="docutils literal"><span class="pre">oActState</span></code> to <code class="docutils literal"><span class="pre">sOPENING</span></code> if the <code class="docutils literal"><span class="pre">iReqOpen</span></code> is true. So now the cylinder is in the opening state, where the cylinder should begin to move, so a command to the valve should be send</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>sOPENING:
   #oCmdOpen:=TRUE;
   #oCmdClose := FALSE;
   IF #iOpened THEN
@@ -256,9 +255,9 @@ For example, if the cylinder is in <code class="docutils literal notranslate"><s
   END_IF;
 </pre></div>
 </div>
-<p>The cylinder begin to move, the output <code class="docutils literal notranslate"><span class="pre">oCmdOpen</span></code> to the valve is true. The cylinder still in this state until the signal <code class="docutils literal notranslate"><span class="pre">iOpened</span></code> became true.</p>
+<p>The cylinder begin to move, the output <code class="docutils literal"><span class="pre">oCmdOpen</span></code> to the valve is true. The cylinder still in this state until the signal <code class="docutils literal"><span class="pre">iOpened</span></code> became true.</p>
 <p>A complete code snippet is shown here:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// Cylinder state machine
+<div class="highlight-none"><div class="highlight"><pre><span></span>// Cylinder state machine
 // best way to implement a state machine is using CASE statement
 //
 // Not complete
@@ -329,13 +328,13 @@ END_CASE;
 <p>Time out are added for diagnostic purposes. When the cylinder still in the opening or closing state for more than the necessary time, the cylinder go to alarm state.</p>
 <p>Of course the cylinder may stay in opened or closed state for indefinite time.</p>
 <p>As you note, there is more code to write than the normal solution presented in the exercises chapter. Depending on the device we are controlling, the use of state machines may make the solution more or less complicated, but anyway more readable and easy to debug.</p>
-<p><a class="reference download internal" download="" href="../../../_downloads/203ffabaabdf1bde647c388b17dfab90/FB_Cylinder_SCL.scl"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">FB</span> <span class="pre">cylinder</span> <span class="pre">in</span> <span class="pre">ST</span></code></a></p>
+<p><a class="reference download internal" href="../../../_downloads/FB_Cylinder_SCL.scl" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">FB</span> <span class="pre">cylinder</span> <span class="pre">in</span> <span class="pre">ST</span></code></a></p>
 </div>
 <div class="section" id="implementation-in-ladder">
-<h3>2.8.2.2. Implementation in Ladder<a class="headerlink" href="#implementation-in-ladder" title="Permalink to this headline">¶</a></h3>
+<h3>3.8.2.2. Implementation in Ladder<a class="headerlink" href="#implementation-in-ladder" title="Permalink to this headline">¶</a></h3>
 <p>State machines are better implemented in textual language (ST, C, C++, etc.). Can be also implemented in Ladder Diagram, its implementation is slightly different.</p>
 <div class="section" id="good-implementation">
-<h4>2.8.2.2.1. Good implementation<a class="headerlink" href="#good-implementation" title="Permalink to this headline">¶</a></h4>
+<h4>3.8.2.2.1. Good implementation<a class="headerlink" href="#good-implementation" title="Permalink to this headline">¶</a></h4>
 <p>As in ST every state is represented by a <strong>unique number</strong>.
 The implementation is divided in 2 stages:</p>
 <blockquote>
@@ -352,7 +351,7 @@ The implementation is divided in 2 stages:</p>
 </div>
 </div>
 <div class="section" id="bad-implementation">
-<h4>2.8.2.2.2. Bad implementation<a class="headerlink" href="#bad-implementation" title="Permalink to this headline">¶</a></h4>
+<h4>3.8.2.2.2. Bad implementation<a class="headerlink" href="#bad-implementation" title="Permalink to this headline">¶</a></h4>
 <p>This implementation is absolutely to be a avoided. You will encounter a lot of implementations similar to it, without comment neither state names.</p>
 <div class="figure align-center" id="id6" style="width: 600px">
 <img alt="../../../_images/state_LD_bad1.png" src="../../../_images/state_LD_bad1.png" />
@@ -379,10 +378,10 @@ The implementation is divided in 2 stages:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="more-ex.html" class="btn btn-neutral float-right" title="2.9. More exercises" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="more-ex.html" class="btn btn-neutral float-right" title="3.9. More exercises" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="exercises-solutions.html" class="btn btn-neutral" title="2.7. Solutions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="exercises-solutions.html" class="btn btn-neutral" title="3.7. Solutions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.7. Solutions &mdash; Automation notes 0.9.0 documentation</title>
+  <title>3.7. Solutions &mdash; Automation notes 0.9.0 documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="2.8. State machine" href="fsm.html" />
-    <link rel="prev" title="2.6. Exercises" href="exercises.html" /> 
+    <link rel="next" title="3.8. State machine" href="fsm.html" />
+    <link rel="prev" title="3.6. Exercises" href="exercises.html" /> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -82,35 +82,34 @@
               
             
             
-              <p class="caption"><span class="caption-text">Automation notes</span></p>
+              <p class="caption"><span class="caption-text">PLC programming</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../basics/index.html">1. Basics</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">2. Siemens PLC</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="s7-PLC.html">2.1. Siemens PLC first steps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="concepts.html">2.2. Fundamental concepts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="programming.html">2.3. Programming</a></li>
-<li class="toctree-l2"><a class="reference internal" href="style-guide.html">2.4. Style guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="badcode.html">2.5. Bad code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exercises.html">2.6. Exercises</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">2.7. Solutions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#line-equation">2.7.1. Line equation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#rising-edge">2.7.2. Rising edge</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#falling-edge">2.7.3. Falling Edge</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#retentive-ton">2.7.4. Retentive TON</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#blink">2.7.5. Blink</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#bi-stable-cylinder">2.7.6. Bi-stable cylinder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Basics/index.html">1. Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/index.html">2. CoDeSys</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. Siemens PLC</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="s7-PLC.html">3.1. Siemens PLC first steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts.html">3.2. Fundamental concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programming.html">3.3. Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="style-guide.html">3.4. Style guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="badcode.html">3.5. Bad code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises.html">3.6. Exercises</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.7. Solutions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#line-equation">3.7.1. Line equation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rising-edge">3.7.2. Rising edge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#falling-edge">3.7.3. Falling Edge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#retentive-ton">3.7.4. Retentive TON</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#blink">3.7.5. Blink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bi-stable-cylinder">3.7.6. Bi-stable cylinder</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="fsm.html">2.8. State machine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="more-ex.html">2.9. More exercises</a></li>
-<li class="toctree-l2"><a class="reference internal" href="more-ex-solutions.html">2.10. More exercises solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="library.html">2.11. Create a library</a></li>
-<li class="toctree-l2"><a class="reference internal" href="project.html">2.12. Simple project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="completeprg.html">2.13. Complete project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsm.html">3.8. State machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="more-ex.html">3.9. More exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="more-ex-solutions.html">3.10. More exercises solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library.html">3.11. Create a library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project.html">3.12. Simple project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="completeprg.html">3.13. Complete project</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/index.html">3. CoDeSys</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../s7-Library/index.html">4. S7 Library</a></li>
 </ul>
 
             
@@ -156,9 +155,9 @@
     
       <li><a href="../../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">2. Siemens PLC</a> &raquo;</li>
+          <li><a href="index.html">3. Siemens PLC</a> &raquo;</li>
         
-      <li>2.7. Solutions</li>
+      <li>3.7. Solutions</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -178,12 +177,12 @@
            <div itemprop="articleBody">
             
   <div class="section" id="solutions">
-<h1>2.7. Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h1>
+<h1>3.7. Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Complete and tested solution can be found in the OpenLib Library</p>
 </div>
-<p><a class="reference download internal" download="" href="../../../_downloads/f5ae24b546423b39222bbe933aea3148/Exercises.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Exercises</span> <span class="pre">solutions</span> <span class="pre">TIA</span> <span class="pre">Portal</span> <span class="pre">15</span></code></a></p>
+<p><a class="reference download internal" href="../../../_downloads/Exercises.zip" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Exercises</span> <span class="pre">solutions</span> <span class="pre">TIA</span> <span class="pre">Portal</span> <span class="pre">15</span></code></a></p>
 <p>Functions written in SCL can be exported and imported.</p>
 <div class="figure align-center" id="id1" style="width: 600px">
 <img alt="../../../_images/scl_export.gif" src="../../../_images/scl_export.gif" />
@@ -193,11 +192,11 @@
 <img alt="../../../_images/scl_import.gif" src="../../../_images/scl_import.gif" />
 <p class="caption"><span class="caption-text">Import an external source and generate the function</span></p>
 </div>
-<p>You can copy the code of the solution to a text file, save it with extension <code class="docutils literal notranslate"><span class="pre">.scl</span></code> then import it to TIA.
+<p>You can copy the code of the solution to a text file, save it with extension <code class="docutils literal"><span class="pre">.scl</span></code> then import it to TIA.
 Otherwise check the project file if you have Tia Portal version greater than 15.</p>
 <div class="section" id="line-equation">
-<h2>2.7.1. Line equation<a class="headerlink" href="#line-equation" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION</span> <span class="s2">&quot;LineEquation&quot;</span> <span class="p">:</span> <span class="n">Void</span>
+<h2>3.7.1. Line equation<a class="headerlink" href="#line-equation" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">FUNCTION</span> <span class="s2">&quot;LineEquation&quot;</span> <span class="p">:</span> <span class="n">Void</span>
 <span class="p">{</span> <span class="n">S7_Optimized_Access</span> <span class="p">:</span><span class="o">=</span> <span class="s1">&#39;TRUE&#39;</span> <span class="p">}</span>
 <span class="n">VERSION</span> <span class="p">:</span> <span class="mf">0.1</span>
    <span class="n">VAR_INPUT</span> 
@@ -234,7 +233,7 @@ Otherwise check the project file if you have Tia Portal version greater than 15.
 </pre></div>
 </div>
 <p>Suppose we have a temperature sensor connected to the analog input of the PLC.
-The analog input read an <code class="docutils literal notranslate"><span class="pre">int</span></code>, 16-bit signed value between -32768 (-2^15) and 32767 (2^15 - 1).</p>
+The analog input read an <code class="docutils literal"><span class="pre">int</span></code>, 16-bit signed value between -32768 (-2^15) and 32767 (2^15 - 1).</p>
 <div class="figure align-center" style="width: 600px">
 <img alt="../../../_images/s7-1200-AI.png" src="../../../_images/s7-1200-AI.png" />
 </div>
@@ -247,17 +246,17 @@ In the PLC program we have to map from AI numerical value to tension, than from 
 </div>
 </div>
 <div class="section" id="rising-edge">
-<h2>2.7.2. Rising edge<a class="headerlink" href="#rising-edge" title="Permalink to this headline">¶</a></h2>
+<h2>3.7.2. Rising edge<a class="headerlink" href="#rising-edge" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="falling-edge">
-<h2>2.7.3. Falling Edge<a class="headerlink" href="#falling-edge" title="Permalink to this headline">¶</a></h2>
+<h2>3.7.3. Falling Edge<a class="headerlink" href="#falling-edge" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="retentive-ton">
-<h2>2.7.4. Retentive TON<a class="headerlink" href="#retentive-ton" title="Permalink to this headline">¶</a></h2>
+<h2>3.7.4. Retentive TON<a class="headerlink" href="#retentive-ton" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="blink">
-<h2>2.7.5. Blink<a class="headerlink" href="#blink" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="s2">&quot;Blink&quot;</span>
+<h2>3.7.5. Blink<a class="headerlink" href="#blink" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="s2">&quot;Blink&quot;</span>
 <span class="p">{</span> <span class="n">S7_Optimized_Access</span> <span class="p">:</span><span class="o">=</span> <span class="s1">&#39;TRUE&#39;</span> <span class="p">}</span>
 <span class="n">VERSION</span> <span class="p">:</span> <span class="mf">0.1</span>
    <span class="n">VAR_INPUT</span> 
@@ -291,8 +290,8 @@ In the PLC program we have to map from AI numerical value to tension, than from 
 </div>
 </div>
 <div class="section" id="bi-stable-cylinder">
-<h2>2.7.6. Bi-stable cylinder<a class="headerlink" href="#bi-stable-cylinder" title="Permalink to this headline">¶</a></h2>
-<p>A simple and functional solution in ladder is presented. A complete solution can be found in the library, and a state machine implementation can be found in the <code class="docutils literal notranslate"><span class="pre">state</span> <span class="pre">machine</span></code> chapter.</p>
+<h2>3.7.6. Bi-stable cylinder<a class="headerlink" href="#bi-stable-cylinder" title="Permalink to this headline">¶</a></h2>
+<p>A simple and functional solution in ladder is presented. A complete solution can be found in the library, and a state machine implementation can be found in the <code class="docutils literal"><span class="pre">state</span> <span class="pre">machine</span></code> chapter.</p>
 <dl class="docutils">
 <dt>Physical IO may be:</dt>
 <dd><ul class="first last simple">
@@ -339,10 +338,10 @@ In the PLC program we have to map from AI numerical value to tension, than from 
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="fsm.html" class="btn btn-neutral float-right" title="2.8. State machine" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="fsm.html" class="btn btn-neutral float-right" title="3.8. State machine" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="exercises.html" class="btn btn-neutral" title="2.6. Exercises" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="exercises.html" class="btn btn-neutral" title="3.6. Exercises" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

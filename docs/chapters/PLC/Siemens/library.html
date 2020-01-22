@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.11. Create a library &mdash; Automation notes 0.9.0 documentation</title>
+  <title>3.11. Create a library &mdash; Automation notes 0.9.0 documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="2.12. Simple project" href="project.html" />
-    <link rel="prev" title="2.10. More exercises solutions" href="more-ex-solutions.html" /> 
+    <link rel="next" title="3.12. Simple project" href="project.html" />
+    <link rel="prev" title="3.10. More exercises solutions" href="more-ex-solutions.html" /> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -82,27 +82,26 @@
               
             
             
-              <p class="caption"><span class="caption-text">Automation notes</span></p>
+              <p class="caption"><span class="caption-text">PLC programming</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../basics/index.html">1. Basics</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">2. Siemens PLC</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="s7-PLC.html">2.1. Siemens PLC first steps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="concepts.html">2.2. Fundamental concepts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="programming.html">2.3. Programming</a></li>
-<li class="toctree-l2"><a class="reference internal" href="style-guide.html">2.4. Style guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="badcode.html">2.5. Bad code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exercises.html">2.6. Exercises</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exercises-solutions.html">2.7. Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fsm.html">2.8. State machine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="more-ex.html">2.9. More exercises</a></li>
-<li class="toctree-l2"><a class="reference internal" href="more-ex-solutions.html">2.10. More exercises solutions</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">2.11. Create a library</a></li>
-<li class="toctree-l2"><a class="reference internal" href="project.html">2.12. Simple project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="completeprg.html">2.13. Complete project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Basics/index.html">1. Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/index.html">2. CoDeSys</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. Siemens PLC</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="s7-PLC.html">3.1. Siemens PLC first steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts.html">3.2. Fundamental concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programming.html">3.3. Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="style-guide.html">3.4. Style guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="badcode.html">3.5. Bad code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises.html">3.6. Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises-solutions.html">3.7. Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsm.html">3.8. State machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="more-ex.html">3.9. More exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="more-ex-solutions.html">3.10. More exercises solutions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.11. Create a library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project.html">3.12. Simple project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="completeprg.html">3.13. Complete project</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../CoDeSys/index.html">3. CoDeSys</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../s7-Library/index.html">4. S7 Library</a></li>
 </ul>
 
             
@@ -148,9 +147,9 @@
     
       <li><a href="../../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">2. Siemens PLC</a> &raquo;</li>
+          <li><a href="index.html">3. Siemens PLC</a> &raquo;</li>
         
-      <li>2.11. Create a library</li>
+      <li>3.11. Create a library</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -170,7 +169,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="create-a-library">
-<h1>2.11. Create a library<a class="headerlink" href="#create-a-library" title="Permalink to this headline">¶</a></h1>
+<h1>3.11. Create a library<a class="headerlink" href="#create-a-library" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-center" id="id1" style="width: 400px">
 <img alt="../../../_images/createLib.gif" src="../../../_images/createLib.gif" />
 <p class="caption"><span class="caption-text">Create a new library</span></p>
@@ -187,9 +186,9 @@
 <img alt="../../../_images/openLib.gif" src="../../../_images/openLib.gif" />
 <p class="caption"><span class="caption-text">Open an existing library</span></p>
 </div>
-<p>Tia portal create a local copy of the functions from the <code class="docutils literal notranslate"><span class="pre">global</span> <span class="pre">library</span></code>.
-The functions are related to the <code class="docutils literal notranslate"><span class="pre">Project</span> <span class="pre">library</span></code>. When a function is modified is modified in the <code class="docutils literal notranslate"><span class="pre">Project</span> <span class="pre">library</span></code>.
-When modification is complete the <code class="docutils literal notranslate"><span class="pre">global</span> <span class="pre">library</span></code> can be updated from the <code class="docutils literal notranslate"><span class="pre">Project</span> <span class="pre">library</span></code></p>
+<p>Tia portal create a local copy of the functions from the <code class="docutils literal"><span class="pre">global</span> <span class="pre">library</span></code>.
+The functions are related to the <code class="docutils literal"><span class="pre">Project</span> <span class="pre">library</span></code>. When a function is modified is modified in the <code class="docutils literal"><span class="pre">Project</span> <span class="pre">library</span></code>.
+When modification is complete the <code class="docutils literal"><span class="pre">global</span> <span class="pre">library</span></code> can be updated from the <code class="docutils literal"><span class="pre">Project</span> <span class="pre">library</span></code></p>
 <div class="figure align-center" id="id5" style="width: 300px">
 <img alt="../../../_images/lib.png" src="../../../_images/lib.png" />
 <p class="caption"><span class="caption-text">Project library and Global libraries</span></p>
@@ -198,7 +197,7 @@ When modification is complete the <code class="docutils literal notranslate"><sp
 <div class="figure align-center" style="width: 400px">
 <img alt="../../../_images/connection_lib.png" src="../../../_images/connection_lib.png" />
 </div>
-<p><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Library</span></code></p>
+<p><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Library</span></code></p>
 </div>
 
 
@@ -209,10 +208,10 @@ When modification is complete the <code class="docutils literal notranslate"><sp
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="project.html" class="btn btn-neutral float-right" title="2.12. Simple project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="project.html" class="btn btn-neutral float-right" title="3.12. Simple project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="more-ex-solutions.html" class="btn btn-neutral" title="2.10. More exercises solutions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="more-ex-solutions.html" class="btn btn-neutral" title="3.10. More exercises solutions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
