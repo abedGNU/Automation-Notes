@@ -6,7 +6,7 @@
 Industrial Automation tutorials
 ================================
 
-CoDeSys, Siemens PLC (TIA Portal), Beremiz, IEC 61131-3, ABB Robot
+CoDeSys, Siemens PLC (TIA Portal), Beremiz, IEC 61131-3, ABB Robot, QElectroTech
 
 .. warning:: |today|
 
@@ -15,13 +15,14 @@ CoDeSys, Siemens PLC (TIA Portal), Beremiz, IEC 61131-3, ABB Robot
 .. warning:: Work in progress
 
 .. toctree::
-  :caption: PLC programming
+  :caption: Content
   :maxdepth: 1
   :numbered:
 
-  chapters/Basics/index
-  chapters/PLC/CoDeSys/index
-  chapters/PLC/Siemens/index
+  chapters/PLC/index
+  chapters/Electrical/index
+  chapters/Robot/ABB/index
+  chapters/Project/index
 
 .. note:: This is a support material for the book Practical industrial automation published on https://leanpub.com/practicalindustrialautomation.
 

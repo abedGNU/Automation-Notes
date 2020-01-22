@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1.1. Basics &mdash; Automation notes 0.9.0 documentation</title>
+  <title>Basics &mdash; Automation notes 0.9.0 documentation</title>
   
 
   
@@ -27,9 +27,7 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1.2. Programming" href="programming.html" />
-    <link rel="prev" title="1. Basics" href="index.html" /> 
+    <link rel="search" title="Search" href="../../search.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -82,19 +80,12 @@
               
             
             
-              <p class="caption"><span class="caption-text">PLC programming</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">1. Basics</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">1.1. Basics</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#sensors-and-actuators">1.1.1. Sensors and actuators</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#programmable-logic-controller-plc">1.1.2. Programmable logic controller: PLC</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="programming.html">1.2. Programming</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../PLC/CoDeSys/index.html">2. CoDeSys</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../PLC/Siemens/index.html">3. Siemens PLC</a></li>
+              <p class="caption"><span class="caption-text">Content</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../PLC/index.html">1. PLC programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Electrical/index.html">2. Eelctrical Drawing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Robot/ABB/index.html">3. Robot programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Project/index.html">4. Real world project</a></li>
 </ul>
 
             
@@ -140,9 +131,7 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">1. Basics</a> &raquo;</li>
-        
-      <li>1.1. Basics</li>
+      <li>Basics</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -162,7 +151,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="basics">
-<h1>1.1. Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h1>
+<h1>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h1>
 <dl class="docutils">
 <dt>In any automatic industrial line the following are present:</dt>
 <dd><ul class="first last simple">
@@ -177,12 +166,12 @@
 <p>This system can be compared to human beings. Usually a human have one actuator, one controller and five senosrs (actually the human being sensors are more than 5).
 This system acquire information from outside via sensors (eye, nose, skin, ears, tongue,…). The brain, controller, elaborate these information and send commands to muscles (actuators).</p>
 <div class="section" id="sensors-and-actuators">
-<h2>1.1.1. Sensors and actuators<a class="headerlink" href="#sensors-and-actuators" title="Permalink to this headline">¶</a></h2>
+<h2>Sensors and actuators<a class="headerlink" href="#sensors-and-actuators" title="Permalink to this headline">¶</a></h2>
 <p>Industrial Sensors are those devices that acquire information from the field. Typically the signals are digital (e.g. switch, proximity sensor) or analog (e.g. height sensors, pressure gauge). Also a camera (vision system) can be classified as a sensor.</p>
 <p>Actuators are mainly driven by electric, pneumatic and oleo-dynamic power. These actuators are mainly motors and valves.</p>
 </div>
 <div class="section" id="programmable-logic-controller-plc">
-<h2>1.1.2. Programmable logic controller: PLC<a class="headerlink" href="#programmable-logic-controller-plc" title="Permalink to this headline">¶</a></h2>
+<h2>Programmable logic controller: PLC<a class="headerlink" href="#programmable-logic-controller-plc" title="Permalink to this headline">¶</a></h2>
 <p>In this era, hard wiring is not any more necessary. Sensors and actuators can be interfaced to a controller, via cables, fieldbuses or any other communication protocol. PLC and microcontroller based solutions are the main controllers in industrial fields. PLC are programmed Usually in Ladder or in ST. Microcontrollers are programmed in C language. At the heart of a PLC, ther is a microcontroller, where is present a firmware to facilitate to programming.</p>
 </div>
 </div>
@@ -192,15 +181,6 @@ This system acquire information from outside via sensors (eye, nose, skin, ears,
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="programming.html" class="btn btn-neutral float-right" title="1.2. Programming" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="index.html" class="btn btn-neutral" title="1. Basics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
