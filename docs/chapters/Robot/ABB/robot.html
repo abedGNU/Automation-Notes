@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3.1. Robot &mdash; Automation notes 0.9.0 documentation</title>
+  <title>3.1. ABB RobotStudio &mdash; Automation notes 0.9.1 documentation</title>
   
 
   
@@ -87,7 +87,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../../PLC/index.html">1. PLC programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Electrical/index.html">2. Eelctrical Drawing</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">3. Robot programming</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">3.1. Robot</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.1. ABB RobotStudio</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#new-virtual-controller">3.1.1. New Virtual controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#jogging">3.1.2. Jogging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#new-virtual-controller-from-a-backup">3.1.3. New virtual controller from a backup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#write-a-program">3.1.4. Write a program</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example">3.1.5. Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#program-cursor">3.1.6. Program cursor</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../Project/index.html">4. Real world project</a></li>
@@ -138,7 +146,7 @@
         
           <li><a href="index.html">3. Robot programming</a> &raquo;</li>
         
-      <li>3.1. Robot</li>
+      <li>3.1. ABB RobotStudio</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -157,8 +165,67 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="robot">
-<h1>3.1. Robot<a class="headerlink" href="#robot" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="abb-robotstudio">
+<h1>3.1. ABB RobotStudio<a class="headerlink" href="#abb-robotstudio" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="new-virtual-controller">
+<h2>3.1.1. New Virtual controller<a class="headerlink" href="#new-virtual-controller" title="Permalink to this headline">¶</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jG8MnEuxfFY" frameborder="0" allowfullscreen></iframe></div>
+<div class="section" id="jogging">
+<h2>3.1.2. Jogging<a class="headerlink" href="#jogging" title="Permalink to this headline">¶</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ik_HzEfIyCM" frameborder="0" allowfullscreen></iframe></div>
+<div class="section" id="new-virtual-controller-from-a-backup">
+<h2>3.1.3. New virtual controller from a backup<a class="headerlink" href="#new-virtual-controller-from-a-backup" title="Permalink to this headline">¶</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/x2w-yy8ci8Q" frameborder="0" allowfullscreen></iframe></div>
+<div class="section" id="write-a-program">
+<h2>3.1.4. Write a program<a class="headerlink" href="#write-a-program" title="Permalink to this headline">¶</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0XEh9NJJaHM" frameborder="0" allowfullscreen></iframe></div>
+<div class="section" id="example">
+<h2>3.1.5. Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>Open an already existing virtual controller and copy the following code snippet in the main module.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>MODULE MainModule
+
+    CONST jointtarget homePos:=[[0,0,0,0,90,0],[0,9E9,9E9,9E9,9E9,9E9]];
+
+
+    CONST robtarget pos1:=[[940,-600,500],[7.96406E-9,-1.38131E-7,-1,-1.64709E-7],[-1,0,-1,0],[9E+9,9E+9,9E+9,9E+9,9E+9,9E+9]];
+    CONST robtarget pos2:=[[800,500,400],[4.09193E-9,4.64768E-8,1,1.56834E-7],[-1,0,-1,0],[9E+9,9E+9,9E+9,9E+9,9E+9,9E+9]];
+
+
+    PROC main()
+        !
+        MoveAbsJ homePos,v1000,z50,tool0;
+        !
+        MoveL Offs(pos1,0,0,300),v1000,z30,tool0\WObj:=wobj0;
+        WaitTime 0.2;
+        MoveL pos1,v1000,fine,tool0\WObj:=wobj0;
+        WaitTime 0.2;
+        MoveL Offs(pos1,0,0,300),v1000,z30,tool0\WObj:=wobj0;
+        !
+        MoveL Offs(pos1,0,0,300),v1000,z30,tool0\WObj:=wobj0;
+        WaitTime 0.2;
+        MoveL pos2,v1000,fine,tool0\WObj:=wobj0;
+        WaitTime 0.2;
+        MoveL Offs(pos1,0,0,300),v1000,z30,tool0\WObj:=wobj0;
+        !
+        MoveAbsJ homePos,v1000,z50,tool0;
+        !
+        Stop;
+    ENDPROC
+
+ENDMODULE
+</pre></div>
+</div>
+<p>Usually a program is prepared offline, then transferd to a real robot. Target positions are Usually taken from mechanical layout, and they are not exact.
+During commisiong the position need to be adjusted. The robot is move manually, by jog, to the desired position and the position is saved, teached, in the relative variable.</p>
+<div class="figure align-center" id="id1" style="width: 400px">
+<img alt="../../../_images/ModifyRobTarget.gif" src="../../../_images/ModifyRobTarget.gif" />
+<p class="caption"><span class="caption-text">Teach a position</span></p>
+</div>
+<p>……… video coming soon</p>
+</div>
+<div class="section" id="program-cursor">
+<h2>3.1.6. Program cursor<a class="headerlink" href="#program-cursor" title="Permalink to this headline">¶</a></h2>
+</div>
 </div>
 
 
@@ -203,7 +270,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../../',
-            VERSION:'0.9.0',
+            VERSION:'0.9.1',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
